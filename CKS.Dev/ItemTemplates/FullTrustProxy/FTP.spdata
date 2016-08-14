@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel"
+            Type="CKS.Dev.SharePoint.FullTrustProxy"
+            DefaultFile="$fileinputname$.cs"
+             SupportedTrustLevels="FullTrust"
+             SupportedDeploymentScopes="Farm"
+             FeatureReceiverAssembly="$SharePoint.Project.AssemblyFullName$"
+             FeatureReceiverClass="$frGuidSPData$">
+  <Files>
+    <ProjectItemFile Source="$fileinputname$.cs" Target="$ProjectItemName$\" Type="NoDeployment" />
+    <ProjectItemFile Source="$fileinputname$Args.cs" Target="$ProjectItemName$\" Type="NoDeployment" />
+  </Files>
+  <ExtensionData>
+    <ExtensionDataItem Key="GeneratedClassName" Value="$fileinputname$Proxy" />
+  </ExtensionData>
+</ProjectItem>

@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Defaults -->
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <!-- General -->
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- Project -->
+  <PropertyGroup>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{86E21F03-1990-4E31-B2B5-92253EC724BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>bin\$(Configuration)\CKS.Dev11.XML</DocumentationFile>
+  </PropertyGroup>
+  <!-- Output -->
+  <PropertyGroup>
+    <AssemblyName>CKS.Dev11</AssemblyName>
+    <RootNamespace>CKS.Dev11.VisualStudio.SharePoint</RootNamespace>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <!-- Source Control -->
+  <PropertyGroup>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <!-- Other VS -->
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <!-- Debug -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' Or '$(Configuration)' == 'DebugSigned' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <!-- Release -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' Or '$(Configuration)' == 'ReleaseSigned' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <!-- Signing -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'DebugSigned' Or '$(Configuration)' == 'ReleaseSigned'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <!-- VSIX Packaging -->
+  <PropertyGroup>
+    <GeneratePkgDefFile>true</GeneratePkgDefFile>
+    <RegisterOutputPackage>true</RegisterOutputPackage>
+    <RegisterWithCodebase>true</RegisterWithCodebase>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>true</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>true</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>true</CopyOutputSymbolsToOutputDirectory>
+  </PropertyGroup>
+  <!-- VSIX Packaging -->
+  <PropertyGroup>
+    <GetVsixSourceItemsDependsOn>$(GetVsixSourceItemsDependsOn);GetVsixTemplateItems;GetCommandAssembly</GetVsixSourceItemsDependsOn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'DebugSigned' Or '$(Configuration)' == 'ReleaseSigned'">
+    <NoWarn>1762</NoWarn>
+    <CopyVsixExtensionFiles>False</CopyVsixExtensionFiles>
+    <CopyVsixExtensionLocation>
+    </CopyVsixExtensionLocation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Content\AshxHandlerTypeProvider.cs" />
+    <Compile Include="Content\BasicServiceApplicationTypeProvider.cs" />
+    <Compile Include="Content\BrandingTypeProvider.cs" />
+    <Compile Include="Content\CentralAdminPageTypeProvider.cs" />
+    <Compile Include="Content\ContentTypeBindingTypeProvider.cs" />
+    <Compile Include="Content\CustomActionGroupTypeProvider.cs" />
+    <Compile Include="Content\CustomActionTypeProvider.cs" />
+    <Compile Include="Content\DelegateControlTypeProvider.cs" />
+    <Compile Include="Content\FullTrustProxyOperationDefinition.cs" />
+    <Compile Include="Content\FullTrustProxyProperties.cs" />
+    <Compile Include="Content\FullTrustProxyRefactoring.cs" />
+    <Compile Include="Content\FullTrustProxyTypeProvider.cs" />
+    <Compile Include="Content\HideCustomActionTypeProvider.cs" />
+    <Compile Include="Content\MasterPageTypeProvider.cs" />
+    <Compile Include="Content\ProjectItemIds.cs" />
+    <Compile Include="Content\SandBoxVisualWebPartTypeProvider.cs" />
+    <Compile Include="Content\SPMetalDefinitionProperties.cs" />
+    <Compile Include="Content\SPMetalDefinitionSerialization.cs" />
+    <Compile Include="Content\SPMetalDefinitionSource.cs" />
+    <Compile Include="Content\SPMetalDefinitionTypeProvider.cs" />
+    <Compile Include="Content\SPPowerShellCmdLetProvider.cs" />
+    <Compile Include="Content\WcfServiceTypeProvider.cs" />
+    <Compile Include="Content\Wizards\ArtifactWizardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Content\Wizards\AshxHandlerWizard.cs" />
+    <Compile Include="Content\Wizards\BaseWizard.cs" />
+    <Compile Include="Content\Wizards\BasicServiceApplicationWizard.cs" />
+    <Compile Include="Content\Wizards\BrandingWizard.cs" />
+    <Compile Include="Content\Wizards\ContextualWebPartWizard.cs" />
+    <Compile Include="Content\Wizards\DefaultCertificateGenerator.cs" />
+    <Compile Include="Content\Wizards\ICertificateGenerator.cs" />
+    <Compile Include="Content\Wizards\ISourceUrlSource.cs" />
+    <Compile Include="Content\Wizards\IWizardFormExtension.cs" />
+    <Compile Include="Content\Wizards\Models\BasePresentationModel.cs" />
+    <Compile Include="Content\Wizards\Models\DeploymentPresentationModel.cs" />
+    <Compile Include="Content\Wizards\Models\WebTemplatePresentationModel.cs" />
+    <Compile Include="Content\Wizards\MRUHelper.cs" />
+    <Compile Include="Content\Wizards\NativeMethods.cs" />
+    <Compile Include="Content\Wizards\Pages\BaseWizardPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Content\Wizards\Pages\DeploymentPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Content\Wizards\Pages\WebTemplatePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Content\Wizards\StrongNameKey.cs" />
+    <Compile Include="Content\Wizards\StrongNameProjectManager.cs" />
+    <Compile Include="Content\Wizards\WcfServiceWizard.cs" />
+    <Compile Include="Content\Wizards\WebTemplateWizard.cs" />
+    <Compile Include="Content\Wizards\WelcomePageType.cs" />
+    <Compile Include="Content\Wizards\WizardHelpers.cs" />
+    <Compile Include="Content\Wizards\WizardProperties\DeploymentProperties.cs" />
+    <Compile Include="Content\Wizards\WizardProperties\WebTemplateProperties.cs" />
+    <Compile Include="Deployment\AssemblyCache.cs" />
+    <Compile Include="Deployment\DeploymentConfigurations\QuickDeployAssembliesDeploymentConfigurationExtension.cs" />
+    <Compile Include="Deployment\DeploymentConfigurations\QuickDeployDeploymentConfigurationExtension.cs" />
+    <Compile Include="Deployment\DeploymentConfigurations\QuickDeployFilesDeploymentConfigurationExtension.cs" />
+    <Compile Include="Deployment\DeploymentConfigurations\UpgradeDeploymentConfigurationExtension.cs" />
+    <Compile Include="Deployment\DeploymentProjectExtension.cs" />
+    <Compile Include="Deployment\DeploymentSteps\ActivateSelectedFeaturesDeploymentStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\AttachToIISWorkerProcessesStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\AttachToOWSTimerProcessStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\AttachToSPUCWorkerProcessStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\AttachToVSSPHost4ProcessStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\CallPowerShellScriptStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\CopyBinariesStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\CopyToSharePointRootStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\CustomDeploymentStepIds.cs" />
+    <Compile Include="Deployment\DeploymentSteps\FeatureActivationInfo.cs" />
+    <Compile Include="Deployment\DeploymentSteps\InstallAppBinContentStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\InstallFeaturesStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\RecreateSiteStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\RestartOWSTimerServiceStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\RestartIisStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\UpgradeSolutionStep.cs" />
+    <Compile Include="Deployment\DeploymentSteps\WarmUpSiteStep.cs" />
+    <Compile Include="Deployment\DeploymentUtilities.cs" />
+    <Compile Include="Deployment\ISharePointProjectFeatureExtensions.cs" />
+    <Compile Include="Deployment\ISharePointProjectItemExtensions.cs" />
+    <Compile Include="Deployment\ProjectProperties\AutoCopyAssembliesProperty.cs">
+      <SubType>Quick Deploy %28CKSDEV%29</SubType>
+    </Compile>
+    <Compile Include="Deployment\ProjectProperties\AutoCopyToSharePointRootProperty.cs" />
+    <Compile Include="Deployment\ProjectProperties\BuildOnCopyAssembliesProperty.cs">
+      <SubType>Quick Deploy %28CKSDEV%29</SubType>
+    </Compile>
+    <Compile Include="Deployment\ProjectProperties\DeploymentPropertyBase.cs" />
+    <Compile Include="Deployment\ProjectProperties\ProjectProperties.cs" />
+    <Compile Include="Deployment\QuickDeployment\AssemblyInspectorResult.cs" />
+    <Compile Include="Deployment\QuickDeployment\AssemblyInspectorWithMarshalByRefObject.cs" />
+    <Compile Include="Deployment\QuickDeployment\IAssemblyInspector.cs" />
+    <Compile Include="Deployment\QuickDeployment\QuickCopyableSharePointArtefact.cs" />
+    <Compile Include="Deployment\QuickDeployment\SharePointPackageArtefact.cs" />
+    <Compile Include="Deployment\QuickDeployment\SharePointProjectFeatureArtefact.cs" />
+    <Compile Include="Deployment\QuickDeployment\SharePointProjectItemArtefact.cs" />
+    <Compile Include="Deployment\QuickDeployment\SharePointProjectItemFileArtefact.cs" />
+    <Compile Include="DTEManager.cs" />
+    <Compile Include="Environment\ActivateSelectedFeaturesProjectExtension.cs" />
+    <Compile Include="Environment\CancelAddingSPIProjectExtension.cs" />
+    <Compile Include="Environment\DeployType.cs" />
+    <Compile Include="Environment\Dialogs\FeaturesPickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environment\Dialogs\FeaturesPickerDialog.designer.cs">
+      <DependentUpon>FeaturesPickerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environment\Dialogs\FeaturesViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environment\Dialogs\FeaturesViewerForm.designer.cs">
+      <DependentUpon>FeaturesViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environment\Dialogs\MultiItemPicker.xaml.cs">
+      <DependentUpon>MultiItemPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Environment\Dialogs\PackagesViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Environment\Dialogs\PackagesViewerForm.designer.cs">
+      <DependentUpon>PackagesViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Environment\Dialogs\SharePointProjectListItem.cs" />
+    <Compile Include="Environment\Dialogs\SharePointProjectPackageListItem.cs" />
+    <Compile Include="Environment\EventHandlerManager.cs" />
+    <Compile Include="Environment\FindAllReferencesProjectExtension.cs" />
+    <Compile Include="Environment\GuidList.cs" />
+    <Compile Include="Environment\Options\EnabledExtensionsOptions.cs" />
+    <Compile Include="Environment\Options\EnabledExtensionsOptionsPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Environment\PkgCmdIDList.cs" />
+    <Compile Include="Environment\ProcessConstants.cs" />
+    <Compile Include="Environment\ProcessUtilities.cs" />
+    <Compile Include="Environment\Dialogs\SharePointProjectFeatureListItem.cs" />
+    <Compile Include="Environment\ProjectExtension.cs" />
+    <Compile Include="Environment\ThreadSafeStreamReader.cs" />
+    <Compile Include="Environment\VSPackage.cs" />
+    <Compile Include="Explorer\ContentTypeFolderNodeExtension.cs" />
+    <Compile Include="Explorer\ContentTypeGroupNodeTypeProvider.cs" />
+    <Compile Include="Explorer\ContentTypeNodeExtension.cs" />
+    <Compile Include="Explorer\ContentTypeSiteNodeExtension.cs" />
+    <Compile Include="Explorer\DesignCatalogFolderNodeExtension.cs" />
+    <Compile Include="Explorer\DesignCatalogSiteNodeExtension.cs" />
+    <Compile Include="Explorer\Dialogs\DeveloperDashboardSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Explorer\Dialogs\DeveloperDashboardSettingsDialog.designer.cs">
+      <DependentUpon>DeveloperDashboardSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Explorer\EntityClassesListNodeExtension.cs" />
+    <Compile Include="Explorer\EntityClassesSiteNodeExtension.cs" />
+    <Compile Include="Explorer\ExplorerNodeIds.cs" />
+    <Compile Include="Explorer\FeatureDependencyNodeTypeProvider.cs" />
+    <Compile Include="Explorer\FeatureElementNodeTypeProvider.cs" />
+    <Compile Include="Explorer\FeatureNodeExtension.cs" />
+    <Compile Include="Explorer\FieldNodeExtension.cs" />
+    <Compile Include="Explorer\FileNodeTypeProvider.cs" />
+    <Compile Include="Explorer\FolderNodeTypeProvider.cs" />
+    <Compile Include="Explorer\ListEventReceiverNodeTypeProvider.cs" />
+    <Compile Include="Explorer\ListEventReceiversListExtension.cs" />
+    <Compile Include="Explorer\MasterPageGallerySiteNodeExtension.cs" />
+    <Compile Include="Explorer\MasterPageNodeTypeProvider.cs" />
+    <Compile Include="Explorer\PageLayoutNodeTypeProvider.cs" />
+    <Compile Include="Explorer\PublishingPageNodeTypeProvider.cs" />
+    <Compile Include="Explorer\PublishingPagesSiteExtension.cs" />
+    <Compile Include="Explorer\SiteColumnGroupNodeTypeProvider.cs" />
+    <Compile Include="Explorer\SiteColumnSiteNodeExtension.cs" />
+    <Compile Include="Explorer\SiteNodeExtension.cs" />
+    <Compile Include="Explorer\SolutionGalleryFolderNodeExtension.cs" />
+    <Compile Include="Explorer\SolutionGallerySiteNodeExtension.cs" />
+    <Compile Include="Explorer\SolutionNodeTypeProvider.cs" />
+    <Compile Include="Explorer\StyleLibraryFolderNodeExtension.cs" />
+    <Compile Include="Explorer\StyleLibrarySiteNodeExtension.cs" />
+    <Compile Include="Explorer\ThemeGalleryFolderNodeExtension.cs" />
+    <Compile Include="Explorer\ThemeGallerySiteNodeExtension.cs" />
+    <Compile Include="Explorer\ThemeNodeTypeProvider.cs" />
+    <Compile Include="Explorer\WebPartGalleryFolderNodeExtension.cs" />
+    <Compile Include="Explorer\WebPartGallerySiteNodeExtension.cs" />
+    <Compile Include="Explorer\WebPartNodeTypeProvider.cs" />
+    <Compile Include="Explorer\WebTemplateNodeTypeProvider.cs" />
+    <Compile Include="Explorer\WebTemplateSiteNodeExtension.cs" />
+    <Compile Include="Extensions.cs" />
+    <Content Include="ItemTemplates\14Ashx\Ashx.ico" />
+    <VSTemplate Include="ItemTemplates\14Ashx\14A.vstemplate" />
+    <Content Include="ItemTemplates\15Ashx\A.ico" />
+    <VSTemplate Include="ItemTemplates\15Ashx\15A.vstemplate" />
+    <Content Include="ItemTemplates\14WTemp\AWTE.xml" />
+    <Content Include="ItemTemplates\14WTemp\AWTO.xml" />
+    <Content Include="ItemTemplates\14WTemp\BWTS.xml" />
+    <Content Include="ItemTemplates\14WTemp\CWTF.xml" />
+    <Content Include="ItemTemplates\14WTemp\DWTS.xml" />
+    <Content Include="ItemTemplates\14WTemp\EWTW.xml" />
+    <Content Include="ItemTemplates\14WTemp\FWTP.aspx" />
+    <Content Include="ItemTemplates\14WTemp\FWTP.xml" />
+    <Content Include="ItemTemplates\14WTemp\GWTW.aspx" />
+    <Content Include="ItemTemplates\14WTemp\GWTW.xml" />
+    <Content Include="ItemTemplates\14WTemp\HWTW.aspx" />
+    <Content Include="ItemTemplates\14WTemp\HWTW.xml" />
+    <VSTemplate Include="ItemTemplates\14WTemp\WT.vstemplate">
+      <SubType>Designer</SubType>
+    </VSTemplate>
+    <Content Include="ItemTemplates\14WCFSrv\Wcf.ico" />
+    <Content Include="ItemTemplates\14WCFSrv\Wcf.svc" />
+    <VSTemplate Include="ItemTemplates\14WCFSrv\14Wcf.vstemplate" />
+    <Content Include="ItemTemplates\14Brand\Branding.ico" />
+    <VSTemplate Include="ItemTemplates\14Brand\Branding.vstemplate" />
+    <Content Include="ItemTemplates\14Brand\CSS.css" />
+    <Content Include="ItemTemplates\14Brand\CSS.xml" />
+    <Content Include="ItemTemplates\14Brand\SMP.xml" />
+    <Content Include="ItemTemplates\14Brand\WER.xml" />
+    <Content Include="ItemTemplates\14BasicSA\BSA.ico" />
+    <VSTemplate Include="ItemTemplates\14BasicSA\BSA.vstemplate" />
+    <Content Include="ItemTemplates\14BasicSA\cmdlets.xml" />
+    <Content Include="ItemTemplates\14BasicSA\MA.aspx" />
+    <Content Include="ItemTemplates\14BasicSA\NA.aspx" />
+    <Content Include="ItemTemplates\14CtxWP\CWP.js" />
+    <Content Include="ItemTemplates\14CtxWP\CWP.png" />
+    <VSTemplate Include="ItemTemplates\14CtxWP\CWP.vstemplate" />
+    <Content Include="ItemTemplates\14CtxWP\CWP.xml" />
+    <Content Include="ItemTemplates\14CtxWP\CWPTab.xml" />
+    <Content Include="ProjectTemplates\14Console\AI.cs" />
+    <Content Include="ProjectTemplates\14Console\P.cs" />
+    <Content Include="ItemTemplates\14Ashx\Ashx.ashx.cs">
+      <DependentUpon>Ashx.ashx</DependentUpon>
+    </Content>
+    <Content Include="ItemTemplates\15Ashx\A.ashx.cs" />
+    <Content Include="ItemTemplates\14WCFSrv\Wcf.svc.cs">
+      <DependentUpon>Wcf.svc</DependentUpon>
+    </Content>
+    <Content Include="ItemTemplates\14WCFSrv\WcfI.cs" />
+    <Content Include="ItemTemplates\14Brand\SFR.cs" />
+    <Content Include="ItemTemplates\14Brand\WER.cs" />
+    <Content Include="ItemTemplates\14BasicSA\BSAFR.cs" />
+    <Content Include="ItemTemplates\14BasicSA\GCmdlet.cs" />
+    <Content Include="ItemTemplates\14BasicSA\MAPage.cs" />
+    <Content Include="ItemTemplates\14BasicSA\NAPage.cs" />
+    <Content Include="ItemTemplates\14BasicSA\NCmdlet.cs" />
+    <Content Include="ItemTemplates\14BasicSA\NewSA.cs" />
+    <Content Include="ItemTemplates\14BasicSA\SA.cs" />
+    <Content Include="ItemTemplates\14BasicSA\SAP.cs" />
+    <Content Include="ItemTemplates\14BasicSA\SAPB.cs" />
+    <Content Include="ItemTemplates\14BasicSA\SCmdlet.cs" />
+    <Content Include="ItemTemplates\14BasicSA\Service.cs" />
+    <Content Include="ItemTemplates\14BasicSA\SP.cs" />
+    <Content Include="ItemTemplates\14CtxWP\CWP.cs" />
+    <Compile Include="ProjectUtilities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyCategory.cs" />
+    <Compile Include="SharePointVersion.cs" />
+    <Compile Include="SPMetalUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ItemTemplates\14Ashx\Ashx.ashx" />
+    <Content Include="ItemTemplates\14Ashx\Ashx.spdata" />
+    <Content Include="ItemTemplates\15Ashx\A.ashx" />
+    <Content Include="ItemTemplates\15Ashx\A.spdata" />
+    <Content Include="ItemTemplates\14WTemp\AWT.spdata" />
+    <Content Include="ItemTemplates\14WTemp\BWTS.spdata" />
+    <Content Include="ItemTemplates\14WTemp\CWTF.feature" />
+    <Content Include="ItemTemplates\14WTemp\DWTS.feature" />
+    <Content Include="ItemTemplates\14WTemp\EWTW.feature" />
+    <Content Include="ItemTemplates\14WTemp\FWTP.spdata" />
+    <Content Include="ItemTemplates\14WTemp\GWTW.spdata" />
+    <Content Include="ItemTemplates\14WTemp\HWTW.spdata" />
+    <Content Include="ItemTemplates\14WCFSrv\Wcf.spdata" />
+    <Content Include="ItemTemplates\14Brand\CSS.spdata" />
+    <Content Include="ItemTemplates\14Brand\Main.spdata" />
+    <Content Include="ItemTemplates\14Brand\SMP.master" />
+    <Content Include="ItemTemplates\14Brand\SMP.spdata" />
+    <Content Include="ItemTemplates\14Brand\WER.spdata" />
+    <Content Include="ItemTemplates\14BasicSA\BSA.spdata" />
+    <Content Include="ItemTemplates\14CtxWP\CWP.spdata" />
+    <Content Include="ItemTemplates\14CtxWP\CWP.webpart" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <VSCTCompile Include="Environment\VSPackage.vsct">
+      <ResourceName>Menus.ctmenu</ResourceName>
+    </VSCTCompile>
+    <Content Include="License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="Resources\NodeIcons\co_iccss.ico" />
+    <None Include="Resources\NodeIcons\co_icgen.ico" />
+    <None Include="Resources\NodeIcons\co_icjpg.ico" />
+    <None Include="Resources\NodeIcons\co_icjs.ico" />
+    <None Include="Resources\NodeIcons\co_icpng.ico" />
+    <None Include="Resources\NodeIcons\co_icxaml.ico" />
+    <None Include="Resources\NodeIcons\co_icxsl.ico" />
+    <Content Include="ProjectTemplates\14Console\C.csproj" />
+    <Content Include="ProjectTemplates\14Console\C.ico" />
+    <VSTemplate Include="ProjectTemplates\14Console\14C.vstemplate">
+      <OutputSubPath>Office\SharePoint Solutions</OutputSubPath>
+    </VSTemplate>
+    <Content Include="ProjectTemplates\15Console\AI.cs" />
+    <Content Include="ProjectTemplates\15Console\C.csproj" />
+    <Content Include="ProjectTemplates\15Console\C.ico" />
+    <Content Include="ProjectTemplates\15Console\P.cs" />
+    <Content Include="Resources\NodeIcons\ContentTypes.ico" />
+    <None Include="Resources\NodeIcons\DesignCatalogNode.ico" />
+    <Content Include="Resources\NodeIcons\CustomActionGroupNode.ico" />
+    <Content Include="Resources\NodeIcons\CustomActionGroupsNode.ico" />
+    <Content Include="Resources\NodeIcons\CustomActionNode.ico" />
+    <Content Include="Resources\NodeIcons\CustomActionsNode.ico" />
+    <Content Include="Resources\NodeIcons\EventReceiver.ico" />
+    <None Include="Resources\NodeIcons\folder.ico" />
+    <Content Include="Resources\NodeIcons\FolderNode.ico" />
+    <Content Include="Resources\NodeIcons\HideCustomActionNode.ico" />
+    <Content Include="Resources\NodeIcons\HideCustomActionsNode.ico" />
+    <None Include="Resources\NodeIcons\iccss.ico" />
+    <None Include="Resources\NodeIcons\icgen.ico" />
+    <None Include="Resources\NodeIcons\icjpg.ico" />
+    <None Include="Resources\NodeIcons\icjs.ico" />
+    <None Include="Resources\NodeIcons\icpng.ico" />
+    <None Include="Resources\NodeIcons\icxaml.ico" />
+    <None Include="Resources\NodeIcons\icxsl.ico" />
+    <Content Include="Resources\NodeIcons\ImageNode.ico" />
+    <Content Include="Resources\NodeIcons\ListTemplatesNode.ico" />
+    <Content Include="Resources\NodeIcons\MasterPageNode.ico" />
+    <Content Include="Resources\NodeIcons\MasterPageNodeCheckedOut.ico" />
+    <Content Include="Resources\NodeIcons\MasterPagesNode.ico" />
+    <Content Include="Resources\NodeIcons\PageNode.ico" />
+    <Content Include="Resources\NodeIcons\PageNodeCheckedOut.ico" />
+    <Content Include="Resources\NodeIcons\PagesNode.ico" />
+    <Content Include="Resources\NodeIcons\SiteColumn.ico" />
+    <Content Include="Resources\NodeIcons\SiteColumns.ico" />
+    <Content Include="Resources\NodeIcons\SolutionNode.ico" />
+    <Content Include="Resources\NodeIcons\SolutionsNode.ico" />
+    <None Include="Resources\NodeIcons\StyleLibraryNode.ico" />
+    <Content Include="Resources\NodeIcons\StylesNode.ico" />
+    <Content Include="Resources\NodeIcons\ThemeNode.ico" />
+    <Content Include="Resources\NodeIcons\ThemeNodeCheckedOut.ico" />
+    <Content Include="Resources\NodeIcons\ThemesNode.ico" />
+    <Content Include="Resources\NodeIcons\WebPartNode.ico" />
+    <Content Include="Resources\NodeIcons\WebPartNodeCheckedOut.ico" />
+    <Content Include="Resources\NodeIcons\WebPartsNode.ico" />
+    <Content Include="Resources\NodeIcons\WebTemplateCategoryNode.ico" />
+    <Content Include="Resources\NodeIcons\WebTemplateNode.ico" />
+    <Content Include="Resources\NodeIcons\WebTemplatesNode.ico" />
+    <EmbeddedResource Include="Content\Wizards\Pages\WebTemplatePage.resx">
+      <DependentUpon>WebTemplatePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environment\Dialogs\FeaturesPickerDialog.resx">
+      <DependentUpon>FeaturesPickerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environment\Dialogs\FeaturesViewerForm.resx">
+      <DependentUpon>FeaturesViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Environment\Dialogs\PackagesViewerForm.resx">
+      <DependentUpon>PackagesViewerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\AshxHandler_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\BasicServiceApplication_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\Branding_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\CentralAdministrationPage_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\ContentTypeBinding_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\CustomAction_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\CustomActionGroup_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\DelegateControl_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\FullTrustProxy_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\HideCustomAction_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\MasterPage_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\PowerShellCmdLet_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\SandBoxVisualWebPart_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\SPMetalDefinition_SolutionExplorer.ico" />
+    <EmbeddedResource Include="Resources\SolutionExplorerIcons\WcfService_SolutionExplorer.ico" />
+    <Content Include="VSIX_CKSLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="VSIX_Screenshot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Environment\VSPackage.resx">
+      <MergeWithCTO>true</MergeWithCTO>
+      <ManifestResourceName>VSPackage</ManifestResourceName>
+      <DependentUpon>VSPackage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EnvDTE100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="EnvDTE80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="EnvDTE90, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.Designer.Interfaces, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.ProjectAggregator, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.SharePoint.Explorer.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Design, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.WizardFramework">
+      <HintPath>..\..\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Microsoft.WizardFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.WizardFrameworkVS">
+      <HintPath>..\..\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\Microsoft.WizardFrameworkVS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Windows\assembly\GAC_MSIL\System.Management.Automation\1.0.0.0__31bf3856ad364e35\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="VSLangProj2, Version=7.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="VSLangProj80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="VSLangProj90, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CKS.Dev11.Cmd\CKS.Dev11.Cmd.csproj">
+      <Project>{7bbdc201-bfad-4831-8e9f-5929cbaa9190}</Project>
+      <Name>CKS.Dev11.Cmd</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <VSTemplate Include="ProjectTemplates\15Console\15C.vstemplate">
+      <SubType>Designer</SubType>
+      <OutputSubPath>Office\SharePoint Solutions</OutputSubPath>
+    </VSTemplate>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Environment\Dialogs\MultiItemPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- Remove once package is in<Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\VSSDK\Microsoft.VsSDK.targets" Condition="false" />-->
+  <!-- Targets -->
+  <Target Name="AssemblyProjectOutputGroup" Outputs="@(AssemblyProjectOutputGroup)">
+    <ItemGroup>
+      <AssemblyProjectOutputGroup Include="$(Targetpath)" />
+    </ItemGroup>
+    <ItemGroup>
+      <AssemblyProjectOutputGroup Include="@(_AssemblyProjectOutputGroup->'%(FullPath)')" />
+    </ItemGroup>
+  </Target>
+  <!-- Targets -->
+  <Target Name="SP2010CommandProjectOutputGroup" Outputs="@(SP2010CommandProjectOutputGroup)">
+    <ItemGroup>
+      <SP2010CommandProjectOutputGroup Include="CKS.Dev11.Cmd.Imp.v4.dll" />
+    </ItemGroup>
+  </Target>
+  <Target Name="SP2013CommandProjectOutputGroup" Outputs="@(SP2013CommandProjectOutputGroup)">
+    <ItemGroup>
+      <SP2013CommandProjectOutputGroup Include="CKS.Dev11.Cmd.Imp.v5.dll" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <ItemTemplateFolderPath>Office SharePoint\CKSDev</ItemTemplateFolderPath>
+  </PropertyGroup>
+  <Target Name="GetVsixTemplateItems">
+    <ItemGroup>
+      <VSIXSourceItem Include="@(IntermediateZipItem)">
+        <VSIXSubPath>I\%(IntermediateZipItem.Language)\$(ItemTemplateFolderPath)\%(IntermediateZipItem.Culture)</VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+    <ItemGroup>
+      <VSIXSourceItem Include="@(IntermediateZipProject)">
+        <VSIXSubPath>P\%(IntermediateZipProject.Language)\%(IntermediateZipProject.OutputSubPath)\%(IntermediateZipProject.Culture)</VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+  </Target>
+  <Target Name="GetCommandAssembly">
+    <ItemGroup>
+      <VSIXSourceItem Include="..\CKS.Dev11.Cmd.Imp\bin\$(Configuration)\CKS.Dev11.Cmd.Imp.v4.dll">
+        <VSIXSubPath>
+        </VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+    <ItemGroup>
+      <VSIXSourceItem Include="..\CKS.Dev11.Cmd.Imp.v5\bin\$(Configuration)\CKS.Dev11.Cmd.Imp.v5.dll">
+        <VSIXSubPath>
+        </VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+  </Target>
+</Project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel"
+             Type="CKS.Dev.SharePoint.SPMetalDefinition" 
+             DefaultFile="$fileinputname$Context.xml">
+  <Files>
+    <ProjectItemFile Source="$fileinputname$Context.xml" Target="$fileinputname$\" Type="NoDeployment" />
+    <ProjectItemFile Source="$fileinputname$Context.cs" Target="$fileinputname$\" Type="NoDeployment" />
+  </Files>
+</ProjectItem>

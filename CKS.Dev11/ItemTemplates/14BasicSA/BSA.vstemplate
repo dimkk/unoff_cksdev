@@ -1,0 +1,71 @@
+﻿<VSTemplate Version="2.0.0"
+            Type="Item"
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007"
+            xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>SharePoint 2010 - Basic Service Application (CKSDev)</Name>
+    <Description>A simple SharePoint 2010 (non-WCF) service application.</Description>
+    <Icon>BSA.ico</Icon>
+    <TemplateID>SharePoint14BasicServiceApplication_CS</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>BasicServiceApplication</DefaultName>
+    <SortOrder>200</SortOrder>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Web</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint.PowerShell</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Management.Automation</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true"
+                 OpenInEditor="false"
+                 TargetFileName="$fileinputname$\SharePointProjectItem.spdata">BSA.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true"
+                 OpenInEditor="false"
+                 TargetFileName="$fileinputname$\FeatureReceiver.cs">BSAFR.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true"
+                 OpenInEditor="false"
+                 TargetFileName="$fileinputname$\NewApplication.aspx">NA.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true"
+                 OpenInEditor="false"
+                 TargetFileName="$fileinputname$\NewApplicationPage.cs">NAPage.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true"
+                 OpenInEditor="false"
+                 TargetFileName="$fileinputname$\$fileinputname$Service.cs">Service.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true"
+                 OpenInEditor="true"
+                 TargetFileName="$fileinputname$\$fileinputname$ServiceApplication.cs">SA.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true"
+                 OpenInEditor="true"
+                 TargetFileName="$fileinputname$\$fileinputname$ServiceApplicationProxy.cs">SAP.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true"
+                 OpenInEditor="false"
+                 TargetFileName="$fileinputname$\$fileinputname$ServiceProxy.cs">SP.cs</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>CKS.Dev11, Version=1.3.0.0, Culture=neutral, PublicKeyToken=487fd6341a5c701f</Assembly>
+    <FullClassName>CKS.Dev11.VisualStudio.SharePoint.Content.Wizards.BasicServiceApplicationWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

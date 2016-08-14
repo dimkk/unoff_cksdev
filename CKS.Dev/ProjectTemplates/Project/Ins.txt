@@ -1,0 +1,23 @@
+﻿INSTRUCTIONS
+=============
+These are details for the project
+
+Project Strucuture
+==================
+* Properties
+** AssemblyInfo.cs - use AssemblyFileVersion for versioning
+* References
+* Features
+* Package
+* Code
+** Controls - place Controls here
+** TimerJobs - place timer jobs in this folder
+** Constants.cs - use this file to store constants
+* SP
+** ContentTypes
+** CustomActions
+** ...
+
+Deployment Instructions
+=======================
+<Deployment instructions go here>

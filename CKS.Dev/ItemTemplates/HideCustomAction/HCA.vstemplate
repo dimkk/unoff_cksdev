@@ -1,0 +1,36 @@
+﻿<VSTemplate Version="2.0.0"
+            Type="Item"
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007"
+            xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Hide Custom Action (CKSDev)</Name>
+    <Description>A hide custom action item.</Description>
+    <Icon>HCA.ico</Icon>    
+    <TemplateID>SharePoint14HideCustomAction_CS_ITEM</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>124</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>HideCustomAction</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+    <vssdk:OutputSubPath>SharePoint\SharePoint14</vssdk:OutputSubPath>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Elements.xml" OpenInEditor="true">Elements.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata" >HCA.spdata</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>CKS.Dev, Version=2.5.0.0, Culture=neutral, PublicKeyToken=487fd6341a5c701f</Assembly>
+    <FullClassName>CKS.Dev.VisualStudio.SharePoint.Content.Wizards.HideCustomActionWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

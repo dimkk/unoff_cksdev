@@ -1,0 +1,46 @@
+﻿<VSTemplate Version="2.0.0"
+            Type="Item"
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007"
+            xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Branding (CKSDev)</Name>
+    <Description>A group of SharePoint project items which form a branding item. Includes a starter masterpage, apply branding event handler and css provision.</Description>
+    <Icon>Branding.ico</Icon>
+    <TemplateID>SharePoint14Branding_CS</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Branding</DefaultName>
+    <SortOrder>95</SortOrder>
+    <vssdk:OutputSubPath>SharePoint\SharePoint14</vssdk:OutputSubPath>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata">Main.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SiteFeatureReceiver.cs">SFR.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\WebEventReceiver\WebEventReceiver.cs">WER.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\WebEventReceiver\Elements.xml">WER.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\WebEventReceiver\SharePointProjectItem.spdata">WER.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\CSS\SharePointProjectItem.spdata">CSS.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\CSS\$fileinputname$.css">CSS.css</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\CSS\Elements.xml">CSS.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\MasterPages\SharePointProjectItem.spdata">SMP.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\MasterPages\$fileinputname$.master">SMP.master</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\MasterPages\Elements.xml">SMP.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>CKS.Dev, Version=2.5.0.0, Culture=neutral, PublicKeyToken=487fd6341a5c701f</Assembly>
+    <FullClassName>CKS.Dev.VisualStudio.SharePoint.Content.Wizards.BrandingWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

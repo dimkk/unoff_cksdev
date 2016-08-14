@@ -1,0 +1,33 @@
+<VSTemplate xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007"
+            Version="2.0.0" 
+            Type="Item">
+  <TemplateData>
+    <Name>Full Trust Proxy Operation (CKSDev)</Name>
+    <Description>A full trust proxy operation which can be called from a sandboxed solution.</Description>
+    <Icon>FTP.ico</Icon>
+    <TemplateID>SharePoint14FullTrustProxy_CS_ITEM</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>ProxyOperation</DefaultName>
+    <SortOrder>1000</SortOrder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <vssdk:OutputSubPath>SharePoint\SharePoint14</vssdk:OutputSubPath>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata">FTP.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$FeatureReceiver.cs">FR.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$.cs">Op.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$Args.cs">OpArgs.cs</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="$OperationItemName$" Value="$fileinputname$"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>CKS.Dev, Version=2.5.0.0, Culture=neutral, PublicKeyToken=487fd6341a5c701f</Assembly>
+    <FullClassName>CKS.Dev.VisualStudio.SharePoint.Content.Wizards.FullTrustProxyOperationWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

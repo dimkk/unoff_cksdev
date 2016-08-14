@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- $loc_ParentContentTypeComment$: $ParentContentTypeName$ ($ParentContentTypeId$) -->
+  <ContentType ID="$contentTypeId$"
+               Name="$DisplayName$"
+               Group="$loc_ContentTypeGroupName$"
+               Description="$loc_ContentTypeDescription$"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+    </FieldRefs>
+    <XmlDocuments>
+      <XmlDocument NamespaceURI="http://schemas.microsoft.com/sharepoint/events">
+        <Receivers xmlns:spe="http://schemas.microsoft.com/sharepoint/events">
+          <Receiver>
+            <Name>$ProjectItemName$EventReceiver</Name>
+            <Type>ItemAdded</Type>
+            <SequenceNumber>10000</SequenceNumber>
+            <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+            <Class>$SharePoint.Type.$guid1$.FullName$</Class>
+            <SolutionId>$SharePoint.Package.Id$</SolutionId>
+            <Data></Data>
+            <Filter></Filter>
+          </Receiver>
+        </Receivers>
+      </XmlDocument>
+    </XmlDocuments>
+  </ContentType>
+</Elements>

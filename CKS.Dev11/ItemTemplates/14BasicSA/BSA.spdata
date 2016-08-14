@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel"
+             Type="CKS.Dev.SharePoint.ServiceApplication"
+             SupportedTrustLevels="FullTrust"
+             SupportedDeploymentScopes="Farm"
+             DefaultFile="$fileinputname$ServiceApplication.cs"
+             FeatureReceiverAssembly="$SharePoint.Project.AssemblyFullName$"
+             FeatureReceiverClass="$rootnamespace$.$subnamespace$FeatureReceiver">
+  <Files>
+    <ProjectItemFile Source="NewApplication.aspx" Target="Admin\$rootnamespace$\$subnamespace$\" Type="TemplateFile" />
+  </Files>
+</ProjectItem>

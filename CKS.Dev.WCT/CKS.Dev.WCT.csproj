@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Defaults -->
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
+  </PropertyGroup>
+  <!-- General -->
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <WarningLevel>4</WarningLevel>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <!-- Project -->
+  <PropertyGroup>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{3861BFD1-D038-4D93-A292-C688BE5B1109}</ProjectGuid>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>bin\$(Configuration)\CKS.Dev.WCT.XML</DocumentationFile>
+  </PropertyGroup>
+  <!-- Output -->
+  <PropertyGroup>
+    <AssemblyName>CKS.Dev.WCT</AssemblyName>
+    <RootNamespace>CKS.Dev.WCT</RootNamespace>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <!-- Source Control -->
+  <PropertyGroup>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <!-- Debug -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' Or '$(Configuration)' == 'DebugSigned' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <!-- Release -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' Or '$(Configuration)' == 'ReleaseSigned' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <!-- Signing -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'DebugSigned' Or '$(Configuration)' == 'ReleaseSigned'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <!-- VSIX Packaging -->
+  <PropertyGroup>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <RegisterOutputPackage>true</RegisterOutputPackage>
+    <RegisterWithCodebase>true</RegisterWithCodebase>
+    <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>true</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>true</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CopyBuildOutputToOutputDirectory>true</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>true</CopyOutputSymbolsToOutputDirectory>
+  </PropertyGroup>
+  <!-- VSIX Packaging -->
+  <PropertyGroup>
+    <GetVsixSourceItemsDependsOn>$(GetVsixSourceItemsDependsOn);GetVsixTemplateItems;GetCommandAssembly</GetVsixSourceItemsDependsOn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugSigned|AnyCPU'">
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <!-- Imports -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2012 DebugSigned|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2012 DebugSigned\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\DebugSigned\CKS.Dev.WCT.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\VSSDK\Microsoft.VsSDK.targets" Condition="false" />
+  <!-- Targets -->
+  <Target Name="AssemblyProjectOutputGroup" Outputs="@(AssemblyProjectOutputGroup)">
+    <ItemGroup>
+      <_AssemblyProjectOutputGroup Include="$(Targetpath)" />
+    </ItemGroup>
+    <ItemGroup>
+      <AssemblyProjectOutputGroup Include="@(_AssemblyProjectOutputGroup->'%(FullPath)')" />
+    </ItemGroup>
+  </Target>
+  <!-- Targets -->
+  <Target Name="CommandProjectOutputGroup" Outputs="@(CommandProjectOutputGroup)">
+    <ItemGroup>
+      <CommandProjectOutputGroup Include="CKS.Dev.WCT.Commands.Implementation.v4.dll" />
+    </ItemGroup>
+  </Target>
+  <Target Name="GetVsixTemplateItems">
+    <ItemGroup>
+      <VSIXSourceItem Include="@(IntermediateZipItem)">
+        <VSIXSubPath>I\%(IntermediateZipItem.Language)\%(IntermediateZipItem.OutputSubPath)\%(IntermediateZipItem.Culture)</VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+    <ItemGroup>
+      <VSIXSourceItem Include="@(IntermediateZipProject)">
+        <VSIXSubPath>P\%(IntermediateZipProject.Language)\%(IntermediateZipProject.OutputSubPath)\%(IntermediateZipProject.Culture)</VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+  </Target>
+  <Target Name="GetCommandAssembly">
+    <ItemGroup>
+      <VSIXSourceItem Include="..\CKS.Dev.WCT.Commands.Implementation.v4\bin\$(Configuration)\CKS.Dev.WCT.Commands.Implementation.v4.dll">
+        <VSIXSubPath>
+        </VSIXSubPath>
+      </VSIXSourceItem>
+    </ItemGroup>
+  </Target>
+  <!-- Item Groups -->
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PublicAssemblies\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.SharePoint, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TemplateWizardInterface, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.TemplateWizardInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\v2.0\Microsoft.VisualStudio.TextManager.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.XmlEditor, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.VisualStudio.XmlEditor\v4.0_10.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.XmlEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WizardFramework">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\Microsoft.WizardFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.WizardFrameworkVS">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\Microsoft.WizardFrameworkVS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VSLangProj, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\DirectoryInfoExtensions.cs" />
+    <Compile Include="Mappers\PackageMapper.cs" />
+    <Compile Include="Mappers\SiteDefinitionsMapper.cs" />
+    <Compile Include="ModelCreators\FeatureCreator.cs" />
+    <Compile Include="Extensions\ProjectItemExtensions.cs" />
+    <Compile Include="ModelCreators\PackageCreator.cs" />
+    <Compile Include="ModelCreators\SiteTemplatesCreator.cs" />
+    <Content Include="ProjectTemplates\CSharp\AssemblyInfo.cs" />
+    <Compile Include="SolutionModel\ApplicationResourceFileDefinitions.cs" />
+    <Compile Include="SolutionModel\ClassFile.cs" />
+    <Compile Include="SolutionModel\ClassInformationCollection.cs" />
+    <Compile Include="SolutionModel\VSWPCatalogItem.cs" />
+    <Compile Include="SolutionModel\VSApplicationResourcesItem.cs" />
+    <Compile Include="SolutionModel\VSAppGlobalResourcesItem.cs" />
+    <Compile Include="SolutionModel\VSFeatureItem.cs" />
+    <Compile Include="SolutionModel\VSSiteDefinitionItem.cs" />
+    <Compile Include="SolutionModel\ShadowList.cs" />
+    <Compile Include="SolutionModel\SiteDefinitionManifestFileReference.cs" />
+    <Compile Include="SolutionModel\VSWorkflowItem.cs" />
+    <Compile Include="SolutionModel\VSListInstanceItem.cs" />
+    <Compile Include="SolutionModel\VSListDefinitionItem.cs" />
+    <Compile Include="SolutionModel\ProjectFileDictionary.cs" />
+    <Compile Include="SolutionModel\ClassMapDictionary.cs" />
+    <Compile Include="Common\Constants.cs" />
+    <Compile Include="Common\ElementFinder.cs" />
+    <Compile Include="Common\Logger.cs" />
+    <Compile Include="SolutionModel\ProjectFile.cs" />
+    <Compile Include="Common\SolutionFileChecker.cs" />
+    <Compile Include="ModelCreators\VSProjectCreator.cs" />
+    <Compile Include="Common\XmlHelper.cs" />
+    <Compile Include="Extensions\TRUEFALSEExtensions.cs" />
+    <Compile Include="ProjectWizard\SharePointCommandIds.cs" />
+    <Compile Include="ProjectWizard\WSPProjImportWizard.cs" />
+    <Compile Include="ProjectWizard\WSPProjImportWizardModel.cs" />
+    <Compile Include="ProjectWizard\WizardWindow.xaml.cs">
+      <DependentUpon>WizardWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\StringResources.Designer.cs">
+      <DependentUpon>StringResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Mappers\FeatureMapper.cs" />
+    <Compile Include="Mappers\HiveFileMapper.cs" />
+    <Compile Include="Mappers\SolutionMapper.cs" />
+    <Compile Include="Mappers\VisualStudioProjectMapper.cs" />
+    <Compile Include="Mappers\VSItemMapper.cs" />
+    <Compile Include="SolutionModel\ClassInformation.cs" />
+    <Compile Include="SolutionModel\VSGenericItem.cs" />
+    <Compile Include="SolutionModel\VSEventHandlerItem.cs" />
+    <Compile Include="SolutionModel\VSContentTypeItem.cs" />
+    <Compile Include="SolutionModel\ElementDefinitionCollection.cs" />
+    <Compile Include="SolutionModel\FileDefinition.cs" />
+    <Compile Include="SolutionModel\ProjectBuildConfiguration.cs" />
+    <Compile Include="SolutionModel\RootFileReference.cs" />
+    <Compile Include="SolutionModel\TemplateFileReference.cs" />
+    <Compile Include="SolutionModel\VSProject.cs" />
+    <Compile Include="SolutionModel\ProjectReference.cs" />
+    <Compile Include="SolutionModel\ReferenceInformation.cs" />
+    <Compile Include="SolutionModel\VSModuleItem.cs" />
+    <Compile Include="SolutionModel\AddContentTypeFieldDefinition.cs" />
+    <Compile Include="SolutionModel\CustomUpgradeActionDefinition.cs" />
+    <Compile Include="SolutionModel\ElementManifestReference.cs" />
+    <Compile Include="SolutionModel\ElementManifestReferences.cs" />
+    <Compile Include="SolutionModel\FeatureDefinition.cs" />
+    <Compile Include="SolutionModel\MapFileDefinition.cs" />
+    <Compile Include="SolutionModel\VSSharePointItem.cs" />
+    <Compile Include="SolutionModel\SolutionDefinition.cs" />
+    <Compile Include="SolutionModel\UpgradeActionsDefinition.cs" />
+    <Compile Include="SolutionModel\VersionRangeDefinition.cs" />
+    <Compile Include="ModelCreators\SolutionCreator.cs" />
+    <Compile Include="SolutionModel\VSSharePointItemCollection.cs" />
+    <Compile Include="SolutionModel\VSWebPartItem.cs" />
+    <Compile Include="SolutionModel\WCTContext.cs" />
+    <Compile Include="SolutionModel\WebTempFileDefinition.cs" />
+    <Compile Include="SolutionModel\wss.cs" />
+    <Compile Include="ModelCreators\ProjectHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\StringResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringResources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ProjectWizard\WizardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CKS.Dev.WCT.Framework\CKS.Dev.WCT.Framework.csproj">
+      <Project>{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}</Project>
+      <Name>CKS.Dev.WCT.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\CSharp\manifest.xml" />
+    <Content Include="ProjectTemplates\CSharp\WSPProjImport.csproj" />
+    <VSTemplate Include="ProjectTemplates\CSharp\WSPProjImport.vstemplate">
+      <OutputSubPath>SharePoint\SharePoint14</OutputSubPath>
+    </VSTemplate>
+    <Content Include="ProjectTemplates\VisualBasic\AssemblyInfo.vb" />
+    <Content Include="ProjectTemplates\VisualBasic\manifest.xml" />
+    <Content Include="ProjectTemplates\VisualBasic\WSPProjImport.vbproj" />
+    <VSTemplate Include="ProjectTemplates\VisualBasic\WSPProjImport.vstemplate">
+      <OutputSubPath>SharePoint\SharePoint14</OutputSubPath>
+    </VSTemplate>
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="VSIX_CKSLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="VSIX_Screenshot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProjectTemplates\CSharp\Package.package" />
+    <None Include="ProjectTemplates\VisualBasic\Package.package" />
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >	
+	<CustomAction
+		Id="$rootnamespace$.$fileinputname$"
+		Location="CommandUI.Ribbon">
+		<CommandUIExtension>
+			<CommandUIDefinitions>
+				<CommandUIDefinition
+					Location="Ribbon.ContextualTabs._children">
+					<ContextualGroup
+						Id="$rootnamespace$.$fileinputname$.ContextualGroup"
+						Color="Yellow"
+						Sequence="2000"
+						Title="My Contextual Group"
+						ContextualGroupId="$rootnamespace$.$fileinputname$.ContextualGroupId"
+						Command="$rootnamespace$.$fileinputname$.ContextualGroupCommand">
+						<Tab
+							Id="$rootnamespace$.$fileinputname$.ContextualGroup.Tab"
+							Command="$rootnamespace$.$fileinputname$.ContextualGroup.TabCommand"
+							Description="This is the contextual tab description"
+							Sequence="10"
+							Title="My Contextual Tab">
+							<Scaling Id="$rootnamespace$.$fileinputname$.ContextualGroup.Scaling">
+								<MaxSize
+									Id="$rootnamespace$.$fileinputname$.ContextualGroup.Scaling.MaxSize"
+									Sequence="10"
+									Size="Max"
+									GroupId="$rootnamespace$.$fileinputname$.ContextualGroup.Group"/>
+								<Scale
+									Id="$rootnamespace$.$fileinputname$.ContextualGroup.Scaling.Scale"
+									Sequence="20"
+									Size="Scale"
+									GroupId="$rootnamespace$.$fileinputname$.ContextualGroup.Group"/>
+							</Scaling>
+							<Groups Id="$rootnamespace$.$fileinputname$.ContextualGroup.Groups">
+								<Group Id="$rootnamespace$.$fileinputname$.ContextualGroup.Group"
+									   Title="Group"
+									   Template="$rootnamespace$.$fileinputname$.Template"
+									   Command="$rootnamespace$.$fileinputname$.ContextualGroup.GroupCommand">
+									<Controls Id="$rootnamespace$.$fileinputname$.ContextualGroup.Group.Controls">
+										<Button
+											Id="$rootnamespace$.$fileinputname$.ContextualGroup.Group.Button"
+											Command="$rootnamespace$.$fileinputname$.ContextualGroup.Group.ButtonCommand"
+											TemplateAlias="ctrl1"
+											LabelText="A Button"
+											Image16by16="/_layouts/images/$fileinputname$/sprites.png"
+											Image16by16Left="0"
+											Image16by16Top="-32"
+											Image32by32="/_layouts/images/$fileinputname$/sprites.png"
+											Image32by32Left="0"
+											Image32by32Top="0"
+											/>
+									</Controls>
+								</Group>
+							</Groups>
+						</Tab>
+					</ContextualGroup>
+				</CommandUIDefinition>
+				<CommandUIDefinition
+					Location="Ribbon.Templates._children">
+					<GroupTemplate Id="$rootnamespace$.$fileinputname$.Template">
+						<Layout Title="Max" LayoutTitle="Max">
+							<OverflowSection DisplayMode="Large" TemplateAlias="ctrl1" Type="OneRow"/>
+						</Layout>
+						<Layout Title="Scale" LayoutTitle="Scale">
+							<OverflowSection DisplayMode="Small" TemplateAlias="ctrl1" Type="ThreeRow"/>
+						</Layout>
+					</GroupTemplate>
+				</CommandUIDefinition>
+			</CommandUIDefinitions>
+		</CommandUIExtension>
+	</CustomAction>
+</Elements>

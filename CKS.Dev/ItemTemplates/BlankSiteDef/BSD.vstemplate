@@ -1,0 +1,40 @@
+﻿<VSTemplate Version="2.0.0"
+            Type="Item"
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007"
+            xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Blank Site Defintion (CKSDev)</Name>
+    <Description>A blank site defintion.</Description>
+    <Icon>BSD.ico</Icon>
+    <TemplateID>SharePoint14BlankSiteDefinition_CS</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>BlankSiteDefinition</DefaultName>
+    <SortOrder>100</SortOrder>
+    <vssdk:OutputSubPath>SharePoint\SharePoint14</vssdk:OutputSubPath>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="$fileinputname$\onet.xml">onet.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\default.aspx">default.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata">BSD.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\webtemp_$SafeSiteDefName$.xml">webtemp.xml</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="$loc_WebTemp_Folder_Lcid$" _locID="$loc_WebTemp_Folder_Lcid$" _locAttrData="Value" Value="1033" />
+      <CustomParameter Name="$loc_SiteDefinition_GroupName$" _locID="$loc_SiteDefinition_GroupName$" _locAttrData="Value" Value="SharePoint Customizations" />
+      <CustomParameter Name="$loc_SiteDefinition_Homepage_Text$" _locID="$loc_SiteDefinition_Homepage_Text$" _locAttrData="Value" Value="Welcome to the custom site" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>CKS.Dev, Version=2.5.0.0, Culture=neutral, PublicKeyToken=487fd6341a5c701f</Assembly>
+    <FullClassName>CKS.Dev.VisualStudio.SharePoint.Content.Wizards.BlankSiteDefinitionWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ps:Config xmlns:ps="urn:Microsoft.SharePoint.PowerShell"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="urn:Microsoft.SharePoint.PowerShell  SPCmdletSchema.xsd">
+  <ps:Assembly Name="$SharePoint.Project.AssemblyFullName$">
+    <ps:Cmdlet>
+      <ps:VerbName>Get-SPQuotaTemplate</ps:VerbName>
+      <ps:ClassName>$rootnamespace$.$fileinputname$</ps:ClassName>
+      <ps:HelpFile>$SharePoint.Project.AssemblyFileName$-help.xml</ps:HelpFile>
+    </ps:Cmdlet>
+  </ps:Assembly>
+</ps:Config>

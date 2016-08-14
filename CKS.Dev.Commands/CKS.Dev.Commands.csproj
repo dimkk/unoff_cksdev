@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Defaults -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <!-- General -->
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <WarningLevel>4</WarningLevel>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <!-- Project -->
+  <PropertyGroup>
+    <ProjectGuid>{24D286CB-B1AB-4C8B-9671-5C6443846A89}</ProjectGuid>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>bin\$(Configuration)\CKS.Dev.Commands.XML</DocumentationFile>
+  </PropertyGroup>
+  <!-- Output -->
+  <PropertyGroup>
+    <AssemblyName>CKS.Dev.Commands</AssemblyName>
+    <RootNamespace>CKS.Dev.VisualStudio.SharePoint.Commands</RootNamespace>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <!-- Source Control -->
+  <PropertyGroup>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <!-- Debug -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' Or '$(Configuration)' == 'DebugSigned' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <!-- Release -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' Or '$(Configuration)' == 'ReleaseSigned' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <!-- Signing -->
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'DebugSigned' Or '$(Configuration)' == 'ReleaseSigned'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'DebugSigned %28Server%29'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugSigned %28Server%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\DebugSigned\CKS.Dev.Commands.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\DebugSigned\CKS.Dev.Commands.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;c:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2012 DebugSigned'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2012 DebugSigned\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\DebugSigned\CKS.Dev.Commands.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2012DebugSigned'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2012DebugSigned\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\DebugSigned\CKS.Dev.Commands.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2013ReleaseSigned'">
+    <OutputPath>bin\VS2013ReleaseSigned\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\ReleaseSigned\CKS.Dev.Commands.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2013DebugSigned'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2013DebugSigned\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\DebugSigned\CKS.Dev.Commands.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2012ReleaseSigned'">
+    <OutputPath>bin\VS2012ReleaseSigned\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>bin\ReleaseSigned\CKS.Dev.Commands.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <!-- Imports -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- Item Groups -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContentTypeSharePointCommandIds.cs" />
+    <Compile Include="FieldSharePointCommandIds.cs" />
+    <Compile Include="Info\ContentTypeNodeInfo.cs" />
+    <Compile Include="Info\DeploymentFeatureInfo.cs" />
+    <Compile Include="Info\DeploymentFeatureScope.cs" />
+    <Compile Include="Info\FieldNodeInfo.cs" />
+    <Compile Include="Info\WebTemplateInfo.cs" />
+    <Compile Include="SiteColumnsSharePointCommandIds.cs" />
+    <Compile Include="WebTemplateCollectionSharePointCommandIds.cs" />
+    <Compile Include="SolutionSharePointCommandIds.cs" />
+    <Compile Include="SolutionGallerySharePointCommandIds.cs" />
+    <Compile Include="CustomToolSharePointCommandIds.cs" />
+    <Compile Include="DeploymentSharePointCommandIds.cs" />
+    <Compile Include="DeveloperDashboardCommandIds.cs" />
+    <Compile Include="FeatureSharePointCommandIds.cs" />
+    <Compile Include="Info\CompilationInfo.cs" />
+    <Compile Include="Info\ContentTypeInfo.cs" />
+    <Compile Include="Info\SolutionGalleryNodeInfo.cs" />
+    <Compile Include="Info\ThemeGalleryNodeInfo.cs" />
+    <Compile Include="Info\DeveloperDashboardNodeInfo.cs" />
+    <Compile Include="Info\EventReceiverInfo.cs" />
+    <Compile Include="Info\FeatureDependencyInfo.cs" />
+    <Compile Include="Info\FeatureElementInfo.cs" />
+    <Compile Include="Info\FeatureInfo.cs" />
+    <Compile Include="Info\FeatureScope.cs" />
+    <Compile Include="Info\FileNodeInfo.cs" />
+    <Compile Include="Info\FolderNodeInfo.cs" />
+    <Compile Include="Info\SolutionInfo.cs" />
+    <Compile Include="Info\SPBasePermissionInfo.cs" />
+    <Compile Include="Info\WebPartGalleryNodeInfo.cs" />
+    <Compile Include="Info\WebPartNodeInfo.cs" />
+    <Compile Include="ListEventReceiversCommandIds.cs" />
+    <Compile Include="MasterPageGallerySharePointCommandIds.cs" />
+    <Compile Include="ObjectModelSharePointCommandIds.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FileSharePointCommandIds.cs" />
+    <Compile Include="ThemeGallerySharePointCommandIds.cs" />
+    <Compile Include="ThemeSharePointCommandIds.cs" />
+    <Compile Include="WebPartGallerySharePointCommandIds.cs" />
+    <Compile Include="WebPartSharePointCommandIds.cs" />
+    <Compile Include="WebTemplateSharePointCommandIds.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,42 @@
+﻿<VSTemplate Version="2.0.0"
+            Type="Item"
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007"
+            xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>SharePoint PowerShell Pipe Binding (CKSDev)</Name>
+    <Description>A SharePoint PowerShell pipe binding item.</Description>
+    <Icon>PSPB.ico</Icon>
+    <TemplateID>SharePoint14PSPipeBind_CS_ITEM</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>300</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>PipeBinding</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+    <vssdk:OutputSubPath>SharePoint\SharePoint14</vssdk:OutputSubPath>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>Microsoft.SharePoint.PowerShell</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.cs">PSPB.cs</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+    </CustomParameters>
+  </TemplateContent>
+</VSTemplate>

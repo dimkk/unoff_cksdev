@@ -1,0 +1,59 @@
+﻿<VSTemplate Version="3.0.0"
+            Type="Item"
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007"
+            >
+  <TemplateData>
+    <Name>SharePoint 2010 - Web Template (CKSDev)</Name>
+    <Description>A SharePoint 2010 hosted Web Template item.</Description>
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="216" />
+    <TemplateID>SharePoint14WebTemplate_CS_ITEM</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>99</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>WebTemplate</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$\Elements.xml" OpenInEditor="true">AWTE.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$\onet.xml" OpenInEditor="true">AWTO.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$\SharePointProjectItem.spdata">AWT.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$Stamp\Elements.xml" OpenInEditor="false">BWTS.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$Stamp\SharePointProjectItem.spdata">BWTS.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Features\$fileinputname$\$fileinputname$.Feature" OpenInEditor="false">CWTF.feature</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Features\$fileinputname$\$fileinputname$.Template.xml" OpenInEditor="false">CWTF.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Features\$fileinputname$Stamp\$fileinputname$Stamp.Feature" OpenInEditor="false">DWTS.feature</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Features\$fileinputname$Stamp\$fileinputname$Stamp.Template.xml" OpenInEditor="false">DWTS.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Features\$fileinputname$WelcomePage\$fileinputname$WelcomePage.Feature" OpenInEditor="false">EWTW.feature</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Features\$fileinputname$WelcomePage\$fileinputname$WelcomePage.Template.xml" OpenInEditor="false">EWTW.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Pages\$fileinputname$PublishingPage\Elements.xml" OpenInEditor="false">FWTP.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Pages\$fileinputname$PublishingPage\TemplatePage.aspx" OpenInEditor="false">FWTP.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Pages\$fileinputname$PublishingPage\SharePointProjectItem.spdata" OpenInEditor="false">FWTP.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Pages\$fileinputname$WikiPage\Elements.xml" OpenInEditor="false">GWTW.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Pages\$fileinputname$WikiPage\wkpstd.aspx" OpenInEditor="false">GWTW.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Pages\$fileinputname$WikiPage\SharePointProjectItem.spdata" OpenInEditor="false">GWTW.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Pages\$fileinputname$WebPartPage\Elements.xml" OpenInEditor="false">HWTW.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Pages\$fileinputname$WebPartPage\default.aspx" OpenInEditor="false">HWTW.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Pages\$fileinputname$WebPartPage\SharePointProjectItem.spdata" OpenInEditor="false">HWTW.spdata</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$loc_ParentContentTypeComment$" _locID="$loc_ParentContentTypeComment$" _locAttrData="Value" Value="Parent ContentType" />
+      <CustomParameter Name="$loc_ContentTypeGroupName$" _locID="$loc_ContentTypeGroupName$" _locAttrData="Value" Value="Custom Content Types" />
+      <CustomParameter Name="$loc_ContentTypeDescription$" _locID="$loc_ContentTypeDescription$" _locAttrData="Value" Value="My Content Type" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>CKS.Dev11, Version=1.3.0.0, Culture=neutral, PublicKeyToken=487fd6341a5c701f</Assembly>
+    <FullClassName>CKS.Dev11.VisualStudio.SharePoint.Content.Wizards.WebTemplateWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

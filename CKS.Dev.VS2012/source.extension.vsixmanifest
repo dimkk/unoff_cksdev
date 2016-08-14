@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="CKS.Dev11" Version="2.0" Language="en-US" Publisher="CKSDev Team" />
+    <DisplayName>CKS - Dev for Visual Studio 2012</DisplayName>
+    <Description xml:space="preserve">The CKS - Development Tools Edition for Visual Studio 2012 is a collection of Visual Studio templates, Server Explorer extensions and tools providing accelerated SharePoint 2010/2013 development based on Microsoft's SharePoint 2010/2013 development tools.</Description>
+    <MoreInfo>http://cksdev.codeplex.com</MoreInfo>
+    <License>License.txt</License>
+    <GettingStartedGuide>http://cksdev.codeplex.com/documentation</GettingStartedGuide>
+    <Icon>VSIX_CKSLogo.png</Icon>
+    <PreviewImage>VSIX_Screenshot.png</PreviewImage>
+    <Tags>SP2010, SP2013</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[12.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+  </Dependencies>
+</PackageManifest>

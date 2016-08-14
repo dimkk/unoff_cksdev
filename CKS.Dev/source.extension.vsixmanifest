@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="CKS.Dev">
+    <Name>CKS - Development Tools Edition (Foundation)</Name>
+    <Author>CKSDev Team</Author>
+    <Version>2.5.0.0</Version>
+    <Description xml:space="preserve">The SharePoint 2010 Visual Studio 2010 Extensions project (CKSDEV) is a collection of Visual Studio templates, Server Explorer extensions and tools providing accelerated SharePoint 2010 development based on Microsoft's new SharePoint 2010 development tools.</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl>http://cksdev.codeplex.com</MoreInfoUrl>
+    <License>License.txt</License>
+    <GettingStartedGuide>http://cksdev.codeplex.com/documentation</GettingStartedGuide>
+    <Icon>VSIX_CKSLogo.png</Icon>
+    <PreviewImage>VSIX_Screenshot.png</PreviewImage>
+    <InstalledByMsi>false</InstalledByMsi>
+    <SupportedProducts>
+      <VisualStudio Version="10.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VSTS</Edition>
+        <Edition>VSTD</Edition>
+      </VisualStudio>
+      <VisualStudio Version="11.0">
+        <Edition>Ultimate</Edition>
+        <Edition>Premium</Edition>
+        <Edition>Pro</Edition>
+        <Edition>VSTS</Edition>
+        <Edition>VSTD</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="3.5" MaxVersion="4.5" />
+  </Identifier>
+  <References>
+    <Reference Id="CKS.Dev.WCT">
+      <Name>CKS - Development Tools Edition (WCT)</Name>
+      <VsixPath>CKS.Dev.WCT.vsix</VsixPath>
+    </Reference>
+  </References>
+  <Content>
+    <MefComponent>|CKS.Dev;AssemblyProjectOutputGroup|</MefComponent>
+    <ItemTemplate>I</ItemTemplate>
+    <VsPackage>|CKS.Dev;PkgdefProjectOutputGroup|</VsPackage>
+    <CustomExtension Type="SharePoint.Commands.v4">|CKS.Dev;CommandProjectOutputGroup|</CustomExtension>
+    <Assembly AssemblyName="CKS.Dev, Version=2.5.0.0, Culture=neutral, PublicKeyToken=487fd6341a5c701f">|CKS.Dev;AssemblyProjectOutputGroup|</Assembly>
+    <ProjectTemplate>P</ProjectTemplate>
+  </Content>
+</Vsix>

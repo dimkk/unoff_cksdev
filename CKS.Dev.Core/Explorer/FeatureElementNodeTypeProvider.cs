@@ -1,0 +1,129 @@
+﻿using CKSProperties = CKS.Dev.Core.Properties.Resources;
+using Microsoft.VisualStudio.SharePoint;
+using Microsoft.VisualStudio.SharePoint.Explorer;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.Composition;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Microsoft.VisualStudio.SharePoint.Explorer.Extensions;
+using System.Xml;
+using System.IO;
+using System.Xml.Linq;
+
+#if VS2012Build_SYMBOL
+using CKS.Dev11.VisualStudio.SharePoint.Commands;
+using CKS.Dev11.VisualStudio.SharePoint.Commands.Info;
+using CKS.Dev11.VisualStudio.SharePoint.Environment.Options;
+using CKS.Dev11.VisualStudio.SharePoint.Explorer.Dialogs;
+#elif VS2013Build_SYMBOL
+using CKS.Dev12.VisualStudio.SharePoint.Commands;
+using CKS.Dev12.VisualStudio.SharePoint.Commands.Info;
+using CKS.Dev12.VisualStudio.SharePoint.Environment.Options;
+using CKS.Dev12.VisualStudio.SharePoint.Explorer.Dialogs;
+#elif VS2014Build_SYMBOL
+using CKS.Dev13.VisualStudio.SharePoint.Commands;
+using CKS.Dev13.VisualStudio.SharePoint.Commands.Info;
+using CKS.Dev13.VisualStudio.SharePoint.Environment.Options;
+using CKS.Dev13.VisualStudio.SharePoint.Explorer.Dialogs;
+#else
+using CKS.Dev.VisualStudio.SharePoint.Commands;
+using CKS.Dev.VisualStudio.SharePoint.Commands.Info;
+using CKS.Dev.VisualStudio.SharePoint.Environment.Options;
+using CKS.Dev.VisualStudio.SharePoint.Explorer.Dialogs;
+#endif
+
+#if VS2012Build_SYMBOL
+    namespace CKS.Dev11.VisualStudio.SharePoint.Explorer
+#elif VS2013Build_SYMBOL
+namespace CKS.Dev12.VisualStudio.SharePoint.Explorer
+#elif VS2014Build_SYMBOL
+    namespace CKS.Dev13.VisualStudio.SharePoint.Explorer
+#else
+namespace CKS.Dev.VisualStudio.SharePoint.Explorer
+#endif
+{
+    /// <summary>
+    /// The feature element group node type provider.
+    /// </summary>
+    // Enables Visual Studio to discover and load this extension.
+    [Export(typeof(IExplorerNodeTypeProvider))]
+    // Indicates that this class extends SharePoint nodes in Server Explorer.
+    [ExplorerNodeType(ExplorerNodeIds.FeatureElementNode)]
+    public class FeatureElementNodeTypeProvider : IExplorerNodeTypeProvider
+    {
+        #region Methods
+
+        /// <summary>
+        /// Creates the feature element nodes.
+        /// </summary>
+        /// <param name="parentNode">The parent node.</param>
+        internal static void CreateFeatureElementNodes(IExplorerNode parentNode)
+        {
+            IFeatureNodeInfo info = parentNode.ParentNode.Annotations.GetValue<IFeatureNodeInfo>();
+            FeatureInfo featureDetails = new FeatureInfo()
+            {
+                FeatureID = info.Id
+            };
+            FeatureElementInfo[] elements =
+                parentNode.Context.SharePointConnection.ExecuteCommand<FeatureInfo, FeatureElementInfo[]>(FeatureSharePointCommandIds.GetFeatureElements, featureDetails);
+            foreach (FeatureElementInfo element in elements)
+            {
+                IExplorerNode elementNode = CreateNode(parentNode, element);
+                elementNode.DoubleClick += ElementNode_DoubleClick;
+            }
+        }
+
+        /// <summary>
+        /// Handles the DoubleClick event of the ElementNode control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="Microsoft.VisualStudio.SharePoint.Explorer.ExplorerNodeEventArgs"/> instance containing the event data.</param>
+        static void ElementNode_DoubleClick(object sender, ExplorerNodeEventArgs e)
+        {
+            FeatureElementInfo elementInfo = e.Node.Annotations.GetValue<FeatureElementInfo>();
+
+            XDocument document = XDocument.Parse(e.Node.Context.SharePointConnection.ExecuteCommand<FeatureElementInfo, string>(FeatureSharePointCommandIds.GetElementDefinition, elementInfo));
+
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.OmitXmlDeclaration = true;
+            settings.NewLineOnAttributes = true;
+            settings.Indent = true;
+            StringBuilder text = new StringBuilder();
+            using (StringWriter stringWriter = new StringWriter(text))
+            using (XmlWriter xmlWriter = XmlWriter.Create(stringWriter, settings))
+            {
+                document.WriteTo(xmlWriter);
+            }
+            e.Node.Context.ShowMessageBox(text.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /// <summary>
+        /// Creates the node.
+        /// </summary>
+        /// <param name="parentNode">The parent node.</param>
+        /// <param name="element">The element.</param>
+        /// <returns></returns>
+        internal static IExplorerNode CreateNode(IExplorerNode parentNode, FeatureElementInfo element)
+        {
+            Dictionary<object, object> annotations = new Dictionary<object, object>();
+            annotations.Add(typeof(FeatureElementInfo), element);
+            return parentNode.ChildNodes.Add(ExplorerNodeIds.FeatureElementNode,
+                String.Format("{0} ({1})", element.Name, element.ElementType),
+                annotations);
+        }
+
+        /// <summary>
+        /// Initializes the new node type.
+        /// </summary>
+        /// <param name="typeDefinition">The definition of the new node type.</param>
+        public void InitializeType(IExplorerNodeTypeDefinition typeDefinition)
+        {
+            typeDefinition.IsAlwaysLeaf = true;
+        }
+
+        #endregion
+    }
+}

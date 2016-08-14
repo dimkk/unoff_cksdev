@@ -1,0 +1,3 @@
+sn -i CKS.Dev.pfx VS_KEY_8F0F49FD5162C33D
+
+

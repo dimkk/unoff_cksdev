@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Strings_Errors_CorruptSolutionFeatureElementManifestIdConflict" xml:space="preserve">
+    <value>Corrupt source solution: The feature element id {0} already exists in this solution. You should consider changing the feature element id in {1}.</value>
+  </data>
+  <data name="String_Errors_TargetSolutionFileNotFound" xml:space="preserve">
+    <value>Target solution file failed to copy: {0}</value>
+  </data>
+  <data name="Strings_CommandLine_FileNotFound" xml:space="preserve">
+    <value>File Not Found: {0}.</value>
+  </data>
+  <data name="Strings_CommandLine_InvalidSourceCS" xml:space="preserve">
+    <value>The source must be a CSharp project file (.csproj).</value>
+  </data>
+  <data name="Strings_CommandLine_NotVSeWSSProject" xml:space="preserve">
+    <value>The project is not a WSPBuilder project.</value>
+  </data>
+  <data name="Strings_CommandLine_NotVSeWSSSolution" xml:space="preserve">
+    <value>The source does not contain WSPBuilder projects.</value>
+  </data>
+  <data name="Strings_CommandLine_SolutionNotPackaged" xml:space="preserve">
+    <value>The WSPBuilder project must be packaged: {0}.</value>
+  </data>
+  <data name="Strings_CommandLine_NotBuilt" xml:space="preserve">
+    <value>The project assembly is not built: {0}.</value>
+  </data>
+  <data name="String_LogMessages_BuildingSourceModel" xml:space="preserve">
+    <value>Building Model of WSPBuilder Project...</value>
+  </data>
+  <data name="String_LogMessages_MappingTarget" xml:space="preserve">
+    <value>Upgrading Project to Visual Studio 2010...</value>
+  </data>
+  <data name="String_LogMessages_ProjectStart" xml:space="preserve">
+    <value>Importing WSPBuilder project: {0}...</value>
+  </data>
+  <data name="String_LogMessages_ProjectCompleted" xml:space="preserve">
+    <value>Completed...</value>
+  </data>
+  <data name="String_LogMessages_ProjectNotCompleted" xml:space="preserve">
+    <value>Not completed: {0}...</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionMissingElementId" xml:space="preserve">
+    <value>Corrupt source solution: element manifest {0} should contain an ID. An ID of {1} has been created for this element, although intended mappings may be affected.</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionMissingFeatureId" xml:space="preserve">
+    <value>Corrupt source solution: missing feature ID attribute in manifest at {0}. A new ID {1} has been supplied and the import of this feature will continue, but any expected mappings to other features and associated classes will be lost and SharePoint items will not be created for any expected child elements of this feature.</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionMissingFeatureNode" xml:space="preserve">
+    <value>Corrupt source solution: missing Feature node in manifest at {0}. This feature will be skipped by the import process and SharePoint items will not be created for any expected child elements of this feature.</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionMissingSolutionNode" xml:space="preserve">
+    <value>Corrupt source solution: missing solution node.</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionWSPElementNotExist" xml:space="preserve">
+    <value>Corrupt source solution: the WSP manifest references an element with ID {0} that does not exist in the solution. This element will be ignored by the import process.</value>
+  </data>
+  <data name="Strings_Errors_MissingManifestOrSolutionXml" xml:space="preserve">
+    <value>Source project is missing manifest and/or solution XML.</value>
+  </data>
+  <data name="Strings_Errors_ObtainSiteDefinitionId" xml:space="preserve">
+    <value>Error obtaining site definition ID from WSP manifest, mappings to the existing Site Elements feature may be lost: {0}</value>
+  </data>
+  <data name="Strings_Errors_ParseWSPMappingFile" xml:space="preserve">
+    <value>Error parsing WSP mapping file.</value>
+  </data>
+  <data name="Strings_Wizard_DeploymentLabelFullTrust" xml:space="preserve">
+    <value>Clicking this option means that users must have SharePoint administrator privileges to run or deploy the solution.</value>
+  </data>
+  <data name="Strings_Wizard_DeploymentRadioFullTrust" xml:space="preserve">
+    <value>Deploy as a full-trust solution</value>
+  </data>
+  <data name="Strings_Wizard_DeploymentHeadline" xml:space="preserve">
+    <value>Specify the site, security level for debugging and the WSPBuilder project source</value>
+  </data>
+  <data name="Strings_Wizard_DeploymentLabelUserSolution" xml:space="preserve">
+    <value>Clicking this option marks the solution as a sandboxed SharePoint solution, allowing any user to run or deploy the solution.</value>
+  </data>
+  <data name="Strings_Wizard_DeploymentRadioUserSolution" xml:space="preserve">
+    <value>Deploy as a sandboxed solution</value>
+  </data>
+  <data name="Strings_Wizard_DeploymentLocalSiteQuestion" xml:space="preserve">
+    <value>What local site do you want to use for debugging?</value>
+  </data>
+  <data name="Strings_Wizard_WizardTitle" xml:space="preserve">
+    <value>WSPBuilder Converter Tool Extension Wizard</value>
+  </data>
+  <data name="Strings_Wizard_DeploymentLabelHelp" xml:space="preserve">
+    <value>Please see the Help topic "Sandboxed Solution Considerations" for more information.</value>
+  </data>
+  <data name="Strings_Wizard_DeploymentTrustLevelQuestion" xml:space="preserve">
+    <value>What is the trust level for this SharePoint solution?</value>
+  </data>
+  <data name="Strings_Wizard_DeploymentValidateButton" xml:space="preserve">
+    <value>Validate</value>
+  </data>
+  <data name="Strings_Wizard_SourceBrowseButton" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="Strings_Wizard_VSeWSSImportSourceHeadline" xml:space="preserve">
+    <value>Specify the new project source</value>
+  </data>
+  <data name="Strings_Wizard_VSeWSSImportSourceCaptionLabel" xml:space="preserve">
+    <value>Visual Studio will import items from the specified deployable WSPBuilder project into a new SharePoint project.</value>
+  </data>
+  <data name="Strings_Wizard_VSeWSSImportSourcePathLabel" xml:space="preserve">
+    <value>What is the path of the existing WSPBuilder project?</value>
+  </data>
+  <data name="Strings_WizardResouces_VSeWSSImportEmptyProjectName" xml:space="preserve">
+    <value>Invalid project name.</value>
+  </data>
+  <data name="Strings_WizardResources_ValidationErrorCaption" xml:space="preserve">
+    <value>Validation Error.</value>
+  </data>
+  <data name="Strings_WizardResources_ValidSiteUrlCaption" xml:space="preserve">
+    <value>Connection successful.</value>
+  </data>
+  <data name="Strings_WizardResources_VSeWSSImportUnableToReadProject" xml:space="preserve">
+    <value>Unable to read the project file '{0}'.</value>
+  </data>
+  <data name="Strings_WizardResources_ValidSiteUrlMessage" xml:space="preserve">
+    <value>Successfully connected to SharePoint site {0}.</value>
+  </data>
+  <data name="Strings_WizardResources_WizardMustBeItem" xml:space="preserve">
+    <value>Cannot create this template as a project.</value>
+  </data>
+  <data name="String_LogMessages_ImportingFeature" xml:space="preserve">
+    <value>Importing {0}: {1}...</value>
+  </data>
+  <data name="String_LogMessages_ImportCompleteSuccess" xml:space="preserve">
+    <value>The WSPBuilder project import completed successfully.</value>
+  </data>
+  <data name="String_LogMessages_SplitElementToUniqueFolder" xml:space="preserve">
+    <value>Splitting SharePoint Item {0} to folder {1}...</value>
+  </data>
+  <data name="String_LogMessages_SplitSharePointItemFromElement" xml:space="preserve">
+    <value>Splitting SharePoint Item {0} from Element {1}...</value>
+  </data>
+  <data name="String_LogMessages_ClassFilesNotMoved" xml:space="preserve">
+    <value>Elements have been split into individual SharePoint Items, but associated class files will not have been moved.</value>
+  </data>
+  <data name="Strings_Errors_AddClassFile" xml:space="preserve">
+    <value>Error adding associated class file {0} for SharePoint Project Item {1}: {2}</value>
+    <comment>s</comment>
+  </data>
+  <data name="Strings_Errors_AddSafeControlToCustomAssembly" xml:space="preserve">
+    <value>Error adding Safe Control {0} for Custom Assembly {1} to Package: {2}</value>
+  </data>
+  <data name="Strings_Errors_AddSPIToFeature" xml:space="preserve">
+    <value>Error adding SharePoint Project Item {0} to Feature {1}: {2}</value>
+  </data>
+  <data name="Strings_Errors_CreateCustomAssembly" xml:space="preserve">
+    <value>Error adding Custom Assembly reference for {0} to Package: {1}</value>
+  </data>
+  <data name="Strings_Errors_CreateFeature" xml:space="preserve">
+    <value>Error creating feature {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_CreateProjectItemFile" xml:space="preserve">
+    <value>Error adding Project Item File {0} to {1}: {2}</value>
+  </data>
+  <data name="Strings_Errors_CreateSPI" xml:space="preserve">
+    <value>Error creating SharePoint Project Item {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_CreateSPISafeControl" xml:space="preserve">
+    <value>Error adding Safe Control {0} to {1}: {2}</value>
+  </data>
+  <data name="Strings_Errors_PackageMapperGetNonMappedManifestElements" xml:space="preserve">
+    <value>Error processing non-mapped manifest elements: {0}</value>
+  </data>
+  <data name="Strings_Errors_PackageTemplateFileUpdate" xml:space="preserve">
+    <value>Error updating Package Template file {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_SetListInstanceFeatureId" xml:space="preserve">
+    <value>Error updating List Instance Feature ID from {0} to {1}: {2}</value>
+  </data>
+  <data name="Strings_Errors_SetListInstanceTemplateTypes" xml:space="preserve">
+    <value>Error setting List Instace template type for {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_SetWebPartTypeName" xml:space="preserve">
+    <value>Error updating Webpart Type Name for {0}: {1}</value>
+  </data>
+  <data name="String_Errors_CorrectFileNodes" xml:space="preserve">
+    <value>Error removing existing File nodes from {0}, file may contain additional incorrect entries after import: {1}</value>
+  </data>
+  <data name="Strings_Errors_CreateMappedFolder" xml:space="preserve">
+    <value>Error creating Mapped Folder {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_SetAssemblyVersion" xml:space="preserve">
+    <value>Error updating referenced assembly version in {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_SetFieldControlClassReference" xml:space="preserve">
+    <value>Error setting Field Control class reference in {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_AddProjectFile" xml:space="preserve">
+    <value>Error adding project file {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_CannotFindLCID" xml:space="preserve">
+    <value>Failed to determine LCID from {0}. WebTemp files will be placed directly in the {1} folder.</value>
+  </data>
+  <data name="Strings_Errors_CannotFindSiteElementsManifest" xml:space="preserve">
+    <value>Cannot find Site Elements Manifest for Site Definition with ID {0}</value>
+  </data>
+  <data name="Strings_Errors_CreateElementManifest" xml:space="preserve">
+    <value>Error creating element manifest {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_ProcessSiteDefinitionListInstance" xml:space="preserve">
+    <value>Error processing List Instances for Site Definition: {0}</value>
+  </data>
+  <data name="Strings_Errors_ProcessSiteDefinitionModule" xml:space="preserve">
+    <value>Error processing Module Definitions for Site Definition: {0}</value>
+  </data>
+  <data name="Strings_Errors_UpdateAspxAscxFile" xml:space="preserve">
+    <value>Error saving Aspx/Ascx file updates to {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_UpdateElementManifest" xml:space="preserve">
+    <value>Error updating element manifest {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_UpdateFieldType" xml:space="preserve">
+    <value>Error saving Field Type file updates to {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_UpdateWebPart" xml:space="preserve">
+    <value>Error saving Web Part file updates to {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_AddSNKFile" xml:space="preserve">
+    <value>Error adding Strong Name Key file {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_MapAdditionalAssembly" xml:space="preserve">
+    <value>Error mapping additional assembly {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_MapAspxAscxFile" xml:space="preserve">
+    <value>Error mapping aspx/ascx file {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_MapElement" xml:space="preserve">
+    <value>Error mapping element {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_MapFeature" xml:space="preserve">
+    <value>Error mapping feature {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_MapPackageTemplate" xml:space="preserve">
+    <value>Error mapping Package Template file: {0}</value>
+  </data>
+  <data name="Strings_Errors_MapRootFiles" xml:space="preserve">
+    <value>Error mapping root files: {0}</value>
+  </data>
+  <data name="Strings_Errors_MapSiteDefinition" xml:space="preserve">
+    <value>Error mapping Site Definition: {0}</value>
+  </data>
+  <data name="Strings_Errors_MapTemplateFiles" xml:space="preserve">
+    <value>Error mapping template files: {0}</value>
+  </data>
+  <data name="Strings_Errors_MigrateProjectItem" xml:space="preserve">
+    <value>Error migrating project item {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_ModelGetAscx" xml:space="preserve">
+    <value>Error determining .ascx files from source project: {0}</value>
+  </data>
+  <data name="Strings_Errors_ModelGetAspx" xml:space="preserve">
+    <value>Error determining .aspx files from source project: {0}</value>
+  </data>
+  <data name="Strings_Errors_ReferenceProjectItem" xml:space="preserve">
+    <value>Error referencing project item {0}: {1}</value>
+  </data>
+  <data name="Strings_LogModel_IdentifyAssemblyFile" xml:space="preserve">
+    <value>Identified assembly file at {0}.</value>
+  </data>
+  <data name="Strings_LogModel_IdentifyAssociatedClass" xml:space="preserve">
+    <value>Identified associated class {0}.{1} in {2}.</value>
+  </data>
+  <data name="Strings_LogModel_IdentifyReceiverClass" xml:space="preserve">
+    <value>Identified receiver class {0}.{1} in {2}.</value>
+  </data>
+  <data name="Strings_LogModel_IdentifyHardCodedReceiverClass" xml:space="preserve">
+    <value>Identified hard coded receiver assembly {0} and receiver class {1}. Since the receiver assembly reference points to the source project assembly, it will be tokenised so that it points to the current project.</value>
+  </data>
+  <data name="Strings_LogModel_IdentifyHardCodedReceiverClassExternalAssembly" xml:space="preserve">
+    <value>Identified hard coded receiver assembly {0} and receiver class {1}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseAssemblies" xml:space="preserve">
+    <value>Parsing assemblies.</value>
+  </data>
+  <data name="Strings_LogModel_ParseAssembly" xml:space="preserve">
+    <value>Parsing assembly {0}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseElement" xml:space="preserve">
+    <value>Parsing element manifest {0}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseElementFile" xml:space="preserve">
+    <value>Parsing element file {0}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseElementManifest" xml:space="preserve">
+    <value>Parsing element manifest {0}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseElements" xml:space="preserve">
+    <value>Parsing elements.</value>
+  </data>
+  <data name="Strings_LogModel_ParseFeature" xml:space="preserve">
+    <value>Parsing feature manifest {0}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseFeatures" xml:space="preserve">
+    <value>Parsing features from source project.</value>
+  </data>
+  <data name="Strings_LogModel_ParseTemplateAndRootFiles" xml:space="preserve">
+    <value>Parsing template and root files from source project.</value>
+  </data>
+  <data name="Strings_LogModel_ParseTemplateFile" xml:space="preserve">
+    <value>Parsing template file at {0}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseRootFile" xml:space="preserve">
+    <value>Parsing root file at {0}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseSafeControl" xml:space="preserve">
+    <value>Parsing safe control {0}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseSiteDefinitions" xml:space="preserve">
+    <value>Parsing site definitions from source project.</value>
+  </data>
+  <data name="Strings_LogModel_ParseSiteDefinition" xml:space="preserve">
+    <value>Parsing site definition {0}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseWebTempFile" xml:space="preserve">
+    <value>Parsing web temp file at {0}.</value>
+  </data>
+  <data name="Strings_LogModel_IdentifySiteProvisioningClass" xml:space="preserve">
+    <value>Identified site provisioning class {0}.{1}.</value>
+  </data>
+  <data name="Strings_LogModel_ParseSiteDefinitionSchema" xml:space="preserve">
+    <value>Parsing site definition schema at {0}.</value>
+  </data>
+  <data name="Strings_Errors_ObtainSiteElementsId" xml:space="preserve">
+    <value>Error obtaining site elements ID from WSP manifest, mappings to the existing Site Elements feature may be lost: {0}</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionMissingExpectedFeatureManifest" xml:space="preserve">
+    <value>Corrupt source solution: Feature manifest expected at {0} not found. This feature will be skipped by the import process.</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionFeatureManifestInvalidXML" xml:space="preserve">
+    <value>Corrupt source solution: Invalid XML in Feature manifest at {0}. This feature will be skipped by the import process. {1}</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionMissingTemplateFile" xml:space="preserve">
+    <value>Corrupt source solution: Template file expected at {0} not found. This file may have been linked from a different path in the source project.</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionMissingRootFile" xml:space="preserve">
+    <value>Corrupt source solution: Root file expected at {0} not found. This file may have been linked from a different path in the source project.</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionMissingExpectedElementManifest" xml:space="preserve">
+    <value>Corrupt source solution: Element manifest expected at {0} not found. No SharePoint Item will be created for this element.</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionElementManifestInvalidXML" xml:space="preserve">
+    <value>Corrupt source solution: Invalid XML in Element manifest at {0}. No SharePoint Item will be created for this element. {1}</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionMissingSchemaFile" xml:space="preserve">
+    <value>Corrupt source solution: Schema file expected at {0} not found.</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionSchemaFileInvalidXML" xml:space="preserve">
+    <value>Corrupt source solution: Invalid XML in schema file at {0}. {1}</value>
+  </data>
+  <data name="Strings_CommandLine_InvalidSourceVB" xml:space="preserve">
+    <value>The source must be a Visual Basic project file (.vbproj).</value>
+  </data>
+  <data name="Strings_Errors_AddReference" xml:space="preserve">
+    <value>Error adding reference {0}: {1}</value>
+  </data>
+  <data name="Strings_Errors_AddProjectReference" xml:space="preserve">
+    <value>Your source project contains a reference to project {0} which would previously been in the same solution. You should ensure that a reference is added, either by adding the relevant project to this solution and referencing, or by referencing the output assembly.</value>
+  </data>
+  <data name="String_LogMessages_UpdateReferenceVersion" xml:space="preserve">
+    <value>Reference version updated. Reference {0} updated to {1}...</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionWspMapperSolutionManifestInconsistency" xml:space="preserve">
+    <value>Corrupt source solution: Feature {0} is refenced in the WSP Mapper (solution.xml) file but does not appear in the Solution Manifest. A new feature will be created as a parent for elements with the following ID's: {1} </value>
+  </data>
+  <data name="String_LogMessages_ThemeCodeUpdate" xml:space="preserve">
+    <value>SharePoint themes have been detected in this project. The handling of themes has been changed in SharePoint 2010. SharePoint 2007 themes can be activated in backwards compatibility mode by setting SPWeb.UIVersion = 3 and subsequently calling SPWeb.Update().</value>
+  </data>
+  <data name="Strings_LogModel_MoveProjectRootElementManifest" xml:space="preserve">
+    <value>Element manifests in the root project folder are not supported: manifest moved to {0}.</value>
+  </data>
+  <data name="Strings_Errors_ModelGetMaster" xml:space="preserve">
+    <value>Error determining .master files from source project: {0}</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionOrphanedFeatureReceiverClass" xml:space="preserve">
+    <value>No Feature has been detected that refers to Feature Receiver class {0}. Feature {1} has been created.</value>
+  </data>
+  <data name="String_LogMessages_FeaturesMapped" xml:space="preserve">
+    <value>{0} of {1} features imported successfully.</value>
+  </data>
+  <data name="Strings_Errors_AddServiceReference" xml:space="preserve">
+    <value>The source project contains service references. The files created by adding and updating this service reference have been imported and will build, but these should be removed and the service references re-added manually.</value>
+  </data>
+  <data name="Strings_Errors_AddWebReference" xml:space="preserve">
+    <value>The source project contains web references. The files created by adding and updating this web reference have been imported and will build, but these should be removed and the web references re-added manually.</value>
+  </data>
+  <data name="Strings_Errors_CorruptSolutionNumberOfFeaturesMismatch" xml:space="preserve">
+    <value>Corrupt source solution: Feature {0} ({1}) has more elements in it's feature manifest than are indicated in the WSP mapper file (pkg\solution.xml). Element {2} cannot be mapped to this feature. </value>
+  </data>
+  <data name="Strings_Errors_CorruptBuildConfiguration" xml:space="preserve">
+    <value>Error adding build configurations.</value>
+  </data>
+  <data name="String_LogMessages_SafeControlEntries" xml:space="preserve">
+    <value>Parsing associated assemblies from source project. Safe Control entries are not added. Please add your Safe Control entries if any, manually.</value>
+  </data>
+  <data name="Strings_WizardResources_ValidationErrorMessage" xml:space="preserve">
+    <value>Cannot connect to the SharePoint site: {0}. {1}</value>
+  </data>
+  <data name="Strings_Wizard_CancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Strings_Wizard_FinishButton" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="Strings_WizardResources_NoSharePointCaption" xml:space="preserve">
+    <value>SharePoint Not Installed.</value>
+  </data>
+  <data name="Strings_WizardResources_NoSharePointMessage" xml:space="preserve">
+    <value>A SharePoint server is not installed on this computer. A SharePoint server must be installed to work with SharePoint projects.</value>
+  </data>
+  <data name="Strings_WizardResources_NotValid" xml:space="preserve">
+    <value>Please enter the site and choose a WSPBuilder project to continue.</value>
+  </data>
+  <data name="Strings_WizardResources_WizardCancelledMessage" xml:space="preserve">
+    <value>Project creation cancelled.</value>
+  </data>
+</root>

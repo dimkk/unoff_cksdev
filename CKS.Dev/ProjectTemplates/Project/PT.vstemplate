@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007">
+  <TemplateData>
+    <Name>SharePoint 2013 - Empty SharePoint Project (CKSDev)</Name>
+    <Description>An empty skelton structured project for creating a SharePoint 2010 application.</Description>
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="212" />
+    <TemplateID>SharePoint14CKSEmptyProject_CS</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>SharePointProject</DefaultName>
+    <SortOrder>9</SortOrder>
+    <vssdk:OutputSubPath>SharePoint\SharePoint14</vssdk:OutputSubPath>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="PT.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties"></Folder>
+      <Folder Name="Package" TargetFolderName="Package"></Folder>
+      <Folder Name="Code" TargetFolderName="Code">
+        <Folder Name="Controls" TargetFolderName="Controls"></Folder>
+        <Folder Name="TimerJobs" TargetFolderName="TimerJobs"></Folder>
+      </Folder>
+      <Folder Name="Deployment" TargetFolderName="Deployment"></Folder>
+      <Folder Name="SP" TargetFolderName="SP">
+        <Folder Name="ContentTypes" TargetFolderName="ContentTypes"></Folder>
+        <Folder Name="CustomActions" TargetFolderName="CustomActions"></Folder>
+        <Folder Name="EventReceivers" TargetFolderName="EventReceivers"></Folder>
+        <Folder Name="Fields" TargetFolderName="Fields"></Folder>
+        <Folder Name="ListInstances" TargetFolderName="ListInstances"></Folder>
+        <Folder Name="Modules" TargetFolderName="Modules">
+          <Folder Name="Assets" TargetFolderName="Assets"></Folder>
+          <Folder Name="MasterPages" TargetFolderName="MasterPages"></Folder>
+          <Folder Name="PageLayouts" TargetFolderName="PageLayouts"></Folder>
+        </Folder>
+        <Folder Name="PropertyBags" TargetFolderName="PropertyBags"></Folder>
+        <Folder Name="WebParts" TargetFolderName="WebParts"></Folder>
+        <Folder Name="WebTemplates" TargetFolderName="WebTemplates"></Folder>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AI.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Package\Package.package">P.package</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Package\Package.Template.xml">P.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Code\Constants.cs">Const.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Instructions.txt" OpenInEditor="true">Ins.txt</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.EmptyProjectWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

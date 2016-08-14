@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<references xmlns="urn:CKS.Dev.Schema.References">
+  <referenceGroup name="Microsoft SharePoint Foundation">
+    <reference path="ISAPI\Microsoft.SharePoint.dll" />
+    <reference path="ISAPI\Microsoft.SharePoint.Linq.dll" />
+    <reference path="ISAPI\Microsoft.SharePoint.Search.dll" />
+    <reference path="ISAPI\Microsoft.SharePoint.Security.dll" />
+    <reference assembly="Microsoft.SharePoint.PowerShell" />
+    <reference path="CONFIG\BIN\Microsoft.SharePoint.ApplicationPages.dll" />
+  </referenceGroup>
+  <referenceGroup name="Microsoft SharePoint Client">
+    <reference path="ISAPI\Microsoft.SharePoint.Client.dll" />
+    <reference path="ISAPI\Microsoft.SharePoint.Client.Runtime.dll" />
+  </referenceGroup>
+  <referenceGroup name="Microsoft SharePoint Administration">
+    <reference path="CONFIG\ADMINBIN\Microsoft.SharePoint.ApplicationPages.Administration.dll" />
+  </referenceGroup>
+  <referenceGroup name="Microsoft SharePoint Server">
+    <reference path="ISAPI\Microsoft.Office.Server.dll" />
+    <reference path="ISAPI\Microsoft.Office.DocumentManagement.dll" />
+    <reference path="ISAPI\Microsoft.Office.Excel.Server.Udf.dll" />
+    <reference path="ISAPI\Microsoft.Office.Policy.dll" />
+    <reference path="ISAPI\Microsoft.Office.Server.Search.dll" />
+    <reference path="ISAPI\Microsoft.Office.Server.UserProfiles.dll" />
+    <reference path="ISAPI\Microsoft.Office.Word.Server.dll" />
+    <reference path="ISAPI\Microsoft.SharePoint.Portal.dll" />
+    <reference path="ISAPI\Microsoft.SharePoint.Publishing.dll" />
+    <reference path="ISAPI\Microsoft.SharePoint.Taxonomy.dll" />
+  </referenceGroup>
+</references>

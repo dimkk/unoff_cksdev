@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" 
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007">
+  <TemplateData>
+    <Name>SharePoint 2010 - SharePoint Console Application (CKSDev)</Name>
+    <Description>A project for creating a SharePoint 2010 command line application.</Description>
+    <Icon>C.ico</Icon>
+    <TemplateID>SharePoint14ConsoleApplication_CS</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>3.5</RequiredFrameworkVersion>
+    <SortOrder>75</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SharePointConsoleApplication</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="C.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AI.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs" OpenInEditor="true">P.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

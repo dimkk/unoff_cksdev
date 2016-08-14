@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="CssFiles" Url="Style Library/$fileinputname$" Path="CSS" RootWebOnly="FALSE">
+    <File Url="$fileinputname$.css" Name="$fileinputname$.css" Type="GhostableInLibrary" />
+  </Module>
+</Elements>

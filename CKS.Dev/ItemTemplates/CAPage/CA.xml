@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CentralAdminPage1"
+                GroupId="MyAdministrationPages"
+                Location="Microsoft.SharePoint.Administration.Applications"
+                Sequence="50"
+                Title="My Test Administration Page">
+    <UrlAction Url="_admin/$rootnamespace$/$fileinputname$.aspx"/>
+  </CustomAction>
+</Elements>

@@ -1,0 +1,442 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Signing", "Signing", "{908F1078-E546-402A-955D-EF483AA5AA3C}"
+	ProjectSection(SolutionItems) = preProject
+		Signing\CKS.Dev.pfx = Signing\CKS.Dev.pfx
+		Signing\DisableStrongNameVerification.bat = Signing\DisableStrongNameVerification.bat
+		Signing\Readme.txt = Signing\Readme.txt
+		Signing\Sign.bat = Signing\Sign.bat
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CKS VS10 Foundation", "CKS VS10 Foundation", "{0C1613BE-0882-441E-B6F6-0215CB580856}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CKS VS10 Server", "CKS VS10 Server", "{CFEFC297-FBFF-40E1-AC80-9EDE57D107AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{510806A6-AEF1-41B0-98BD-3293D9183C6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CKS VS Gallery", "CKS VS Gallery", "{372C2EBB-C40A-42EB-9FD2-2BD1CDA08695}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\CKS VS Gallery\FoundationHtml.htm = Documents\CKS VS Gallery\FoundationHtml.htm
+		Documents\CKS VS Gallery\ServerHtml.htm = Documents\CKS VS Gallery\ServerHtml.htm
+		Documents\CKS VS Gallery\VS Gallery Page SPF.docx = Documents\CKS VS Gallery\VS Gallery Page SPF.docx
+		Documents\CKS VS Gallery\VS Gallery Page SPS.docx = Documents\CKS VS Gallery\VS Gallery Page SPS.docx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentations", "Presentations", "{6E65051C-E25E-40DE-8C53-6EEB1A196505}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\Presentations\CKS PowerPoint 2007 Template.potx = Documents\Presentations\CKS PowerPoint 2007 Template.potx
+		Documents\Presentations\CKS PowerPoint 2010 Template.potx = Documents\Presentations\CKS PowerPoint 2010 Template.potx
+		Documents\Presentations\ckspptxbg.png = Documents\Presentations\ckspptxbg.png
+		Documents\Presentations\Demo.png = Documents\Presentations\Demo.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CodePlex", "CodePlex", "{D0A4E431-D5D2-4780-8A6E-9ECC7FDE1CDA}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\CodePlex\AddReferenceTab.png = Documents\CodePlex\AddReferenceTab.png
+		Documents\CodePlex\AndrewWoodward.png = Documents\CodePlex\AndrewWoodward.png
+		Documents\CodePlex\ChrisOBrien.png = Documents\CodePlex\ChrisOBrien.png
+		Documents\CodePlex\CKSLogo.png = Documents\CodePlex\CKSLogo.png
+		Documents\CodePlex\CopyAssembly.png = Documents\CodePlex\CopyAssembly.png
+		Documents\CodePlex\Cross.png = Documents\CodePlex\Cross.png
+		Documents\CodePlex\CrossMini.png = Documents\CodePlex\CrossMini.png
+		Documents\CodePlex\MiniCKSLogo.png = Documents\CodePlex\MiniCKSLogo.png
+		Documents\CodePlex\NigelPrice.png = Documents\CodePlex\NigelPrice.png
+		Documents\CodePlex\OOBServerExplorer.png = Documents\CodePlex\OOBServerExplorer.png
+		Documents\CodePlex\PeterHolpar.png = Documents\CodePlex\PeterHolpar.png
+		Documents\CodePlex\SandboxCompile.png = Documents\CodePlex\SandboxCompile.png
+		Documents\CodePlex\SE_DevDash2.png = Documents\CodePlex\SE_DevDash2.png
+		Documents\CodePlex\SE_DevDash5.png = Documents\CodePlex\SE_DevDash5.png
+		Documents\CodePlex\TickMini.png = Documents\CodePlex\TickMini.png
+		Documents\CodePlex\Upgrade1.png = Documents\CodePlex\Upgrade1.png
+		Documents\CodePlex\Upgrade3.png = Documents\CodePlex\Upgrade3.png
+		Documents\CodePlex\Upgrade4.png = Documents\CodePlex\Upgrade4.png
+		Documents\CodePlex\Upgrade5.png = Documents\CodePlex\Upgrade5.png
+		Documents\CodePlex\Upgrade6.png = Documents\CodePlex\Upgrade6.png
+		Documents\CodePlex\WictorWilen.png = Documents\CodePlex\WictorWilen.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RetiredTemplates", "RetiredTemplates", "{EF856CC3-4BE5-4AE1-8445-1779E76F91F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SBVisWebPart", "SBVisWebPart", "{F50154B5-27B9-4B60-91CF-0F4C11049AA8}"
+	ProjectSection(SolutionItems) = preProject
+		CKS.Dev\ItemTemplates\SBVisWebPart\Default.webpart = CKS.Dev\ItemTemplates\SBVisWebPart\Default.webpart
+		CKS.Dev\ItemTemplates\SBVisWebPart\Default.xml = CKS.Dev\ItemTemplates\SBVisWebPart\Default.xml
+		CKS.Dev\ItemTemplates\SBVisWebPart\DefaultUC.ascx = CKS.Dev\ItemTemplates\SBVisWebPart\DefaultUC.ascx
+		CKS.Dev\ItemTemplates\SBVisWebPart\DefaultUC.ascx.cs = CKS.Dev\ItemTemplates\SBVisWebPart\DefaultUC.ascx.cs
+		CKS.Dev\ItemTemplates\SBVisWebPart\SBVisWebPart.ico = CKS.Dev\ItemTemplates\SBVisWebPart\SBVisWebPart.ico
+		CKS.Dev\ItemTemplates\SBVisWebPart\SBVisWebPart.spdata = CKS.Dev\ItemTemplates\SBVisWebPart\SBVisWebPart.spdata
+		CKS.Dev\ItemTemplates\SBVisWebPart\SBVisWebPart.vstemplate = CKS.Dev\ItemTemplates\SBVisWebPart\SBVisWebPart.vstemplate
+		CKS.Dev\ItemTemplates\SBVisWebPart\WebPartWrapper.cs = CKS.Dev\ItemTemplates\SBVisWebPart\WebPartWrapper.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CKS VS10 WSPBuilder Conversion Tool", "CKS VS10 WSPBuilder Conversion Tool", "{D2415EDA-667B-4F8A-954F-1C211E43BF62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Research", "Research", "{9BF8E2D9-ECCE-471A-9440-E7B027D14D0A}"
+	ProjectSection(SolutionItems) = preProject
+		Documents\Research\WCT.zip = Documents\Research\WCT.zip
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VS2010", "VS2010", "{65D3DA91-ECE3-4C8B-A9A3-111565C6F199}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VS2012", "VS2012", "{BC34C770-B1FA-4479-9D1E-2DD114FCB2A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CKS VS11", "CKS VS11", "{45A40469-BADD-497E-847A-D6BDC811FC6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{8CC24DF2-D25D-4C1E-9DE7-6B985F8B0342}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{54E752CD-F9AC-498D-A47A-3B48CEEC719E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{3D6FA3E7-1697-4835-9D4D-455C17345101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev", "CKS.Dev\CKS.Dev.csproj", "{92535907-8225-49EE-92D2-969C93DD4E4B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20} = {F0E7F89A-D17F-40BD-A962-9EA37ED33B20}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.Server", "CKS.Dev.Server\CKS.Dev.Server.csproj", "{C0558C6D-984B-4EA2-9048-EC5C555D83E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.Commands", "CKS.Dev.Commands\CKS.Dev.Commands.csproj", "{24D286CB-B1AB-4C8B-9671-5C6443846A89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.Commands.Implementation.v4", "CKS.Dev.Commands.Implementation.v4\CKS.Dev.Commands.Implementation.v4.csproj", "{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}"
+	ProjectSection(ProjectDependencies) = postProject
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89} = {24D286CB-B1AB-4C8B-9671-5C6443846A89}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.Server.Commands.Implementation.v4", "CKS.Dev.Server.Commands.Implementation.v4\CKS.Dev.Server.Commands.Implementation.v4.csproj", "{4208FF77-AE28-4F4B-9776-E9355BB4C243}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.Server.Commands", "CKS.Dev.Server.Commands\CKS.Dev.Server.Commands.csproj", "{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.WCT", "CKS.Dev.WCT\CKS.Dev.WCT.csproj", "{3861BFD1-D038-4D93-A292-C688BE5B1109}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.WCT.Framework", "CKS.Dev.WCT.Framework\CKS.Dev.WCT.Framework.csproj", "{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.WCT.Commands.Implementation.v4", "CKS.Dev.WCT.Commands.Implementation.v4\CKS.Dev.WCT.Commands.Implementation.v4.csproj", "{01875667-0A2D-4579-A515-BA9F0040FCDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev11", "CKS.Dev11\CKS.Dev11.csproj", "{86E21F03-1990-4E31-B2B5-92253EC724BC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F} = {429D9B6A-0477-48FA-B401-2FA7B910AB8F}
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3} = {E29523B5-06FD-48C1-9E12-63E7E80BFED3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev11.Cmd", "CKS.Dev11.Cmd\CKS.Dev11.Cmd.csproj", "{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev11.Cmd.Imp.v4", "CKS.Dev11.Cmd.Imp\CKS.Dev11.Cmd.Imp.v4.csproj", "{E29523B5-06FD-48C1-9E12-63E7E80BFED3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190} = {7BBDC201-BFAD-4831-8E9F-5929CBAA9190}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev11.Cmd.Imp.v5", "CKS.Dev11.Cmd.Imp.v5\CKS.Dev11.Cmd.Imp.v5.csproj", "{429D9B6A-0477-48FA-B401-2FA7B910AB8F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190} = {7BBDC201-BFAD-4831-8E9F-5929CBAA9190}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.VS2012", "CKS.Dev.VS2012\CKS.Dev.VS2012.csproj", "{FC8F76FE-61AF-42E1-8682-4687D2612FEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.VS2013", "CKS.Dev.VS2013\CKS.Dev.VS2013.csproj", "{73A6811B-5395-4BE3-885E-F8011C8FE147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.Core", "CKS.Dev.Core\CKS.Dev.Core.csproj", "{F5EAF304-52EB-4952-B0F3-176DCFC569D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.Core.Cmd.Imp.v4", "CKS.Dev.Core.Cmd.Imp.v4\CKS.Dev.Core.Cmd.Imp.v4.csproj", "{8C716A7B-E058-49F9-BDAE-0B05A13843DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.Core.Cmd.Imp.v5", "CKS.Dev.Core.Cmd.Imp.v5\CKS.Dev.Core.Cmd.Imp.v5.csproj", "{6C0104FC-034B-48FC-92AF-A750F7828701}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.Core.Cmd", "CKS.Dev.Core.Cmd\CKS.Dev.Core.Cmd.csproj", "{5671D635-160C-4BE6-B43C-43C99A308040}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKS.Dev.Core.Scaffolder", "CKS.Dev.Core.Scaffolder\CKS.Dev.Core.Scaffolder.csproj", "{8D9563FD-B2AA-4378-A950-962775E18C30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugSigned|Any CPU = DebugSigned|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ReleaseSigned|Any CPU = ReleaseSigned|Any CPU
+		VS2012DebugSigned|Any CPU = VS2012DebugSigned|Any CPU
+		VS2012ReleaseSigned|Any CPU = VS2012ReleaseSigned|Any CPU
+		VS2013DebugSigned|Any CPU = VS2013DebugSigned|Any CPU
+		VS2013ReleaseSigned|Any CPU = VS2013ReleaseSigned|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92535907-8225-49EE-92D2-969C93DD4E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92535907-8225-49EE-92D2-969C93DD4E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92535907-8225-49EE-92D2-969C93DD4E4B}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{92535907-8225-49EE-92D2-969C93DD4E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92535907-8225-49EE-92D2-969C93DD4E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92535907-8225-49EE-92D2-969C93DD4E4B}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{92535907-8225-49EE-92D2-969C93DD4E4B}.VS2012DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{92535907-8225-49EE-92D2-969C93DD4E4B}.VS2012ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{92535907-8225-49EE-92D2-969C93DD4E4B}.VS2013DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{92535907-8225-49EE-92D2-969C93DD4E4B}.VS2013ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4}.VS2012DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4}.VS2012ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4}.VS2013DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4}.VS2013ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.DebugSigned|Any CPU.Deploy.0 = DebugSigned|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.VS2012DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.VS2012ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.VS2013DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{3861BFD1-D038-4D93-A292-C688BE5B1109}.VS2013ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{01875667-0A2D-4579-A515-BA9F0040FCDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01875667-0A2D-4579-A515-BA9F0040FCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01875667-0A2D-4579-A515-BA9F0040FCDB}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{01875667-0A2D-4579-A515-BA9F0040FCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01875667-0A2D-4579-A515-BA9F0040FCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01875667-0A2D-4579-A515-BA9F0040FCDB}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{01875667-0A2D-4579-A515-BA9F0040FCDB}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{01875667-0A2D-4579-A515-BA9F0040FCDB}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{01875667-0A2D-4579-A515-BA9F0040FCDB}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{01875667-0A2D-4579-A515-BA9F0040FCDB}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.DebugSigned|Any CPU.Build.0 = DebugSigned|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.ReleaseSigned|Any CPU.Build.0 = ReleaseSigned|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.VS2012DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.VS2012ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.VS2013DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{86E21F03-1990-4E31-B2B5-92253EC724BC}.VS2013ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.DebugSigned|Any CPU.Build.0 = DebugSigned|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.ReleaseSigned|Any CPU.Build.0 = ReleaseSigned|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.DebugSigned|Any CPU.Build.0 = DebugSigned|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.ReleaseSigned|Any CPU.Build.0 = ReleaseSigned|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.DebugSigned|Any CPU.ActiveCfg = DebugSigned|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.DebugSigned|Any CPU.Build.0 = DebugSigned|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.ReleaseSigned|Any CPU.ActiveCfg = ReleaseSigned|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.ReleaseSigned|Any CPU.Build.0 = ReleaseSigned|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.DebugSigned|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.DebugSigned|Any CPU.Build.0 = Debug|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.ReleaseSigned|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.ReleaseSigned|Any CPU.Build.0 = Release|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.VS2012DebugSigned|Any CPU.Build.0 = VS2012DebugSigned|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.VS2012ReleaseSigned|Any CPU.Build.0 = VS2012ReleaseSigned|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.DebugSigned|Any CPU.ActiveCfg = Debug|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.DebugSigned|Any CPU.Build.0 = Debug|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.ReleaseSigned|Any CPU.ActiveCfg = Release|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.ReleaseSigned|Any CPU.Build.0 = Release|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.VS2013DebugSigned|Any CPU.Build.0 = VS2013DebugSigned|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{73A6811B-5395-4BE3-885E-F8011C8FE147}.VS2013ReleaseSigned|Any CPU.Build.0 = VS2013ReleaseSigned|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.DebugSigned|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.DebugSigned|Any CPU.Build.0 = Debug|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.ReleaseSigned|Any CPU.ActiveCfg = Release|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.ReleaseSigned|Any CPU.Build.0 = Release|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.VS2012DebugSigned|Any CPU.Build.0 = VS2012DebugSigned|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.VS2012ReleaseSigned|Any CPU.Build.0 = VS2012ReleaseSigned|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.VS2013DebugSigned|Any CPU.Build.0 = VS2013DebugSigned|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7}.VS2013ReleaseSigned|Any CPU.Build.0 = VS2013ReleaseSigned|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.DebugSigned|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.DebugSigned|Any CPU.Build.0 = Debug|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.ReleaseSigned|Any CPU.ActiveCfg = Release|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.ReleaseSigned|Any CPU.Build.0 = Release|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.VS2012DebugSigned|Any CPU.Build.0 = VS2012DebugSigned|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.VS2012ReleaseSigned|Any CPU.Build.0 = VS2012ReleaseSigned|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.VS2013DebugSigned|Any CPU.Build.0 = VS2013DebugSigned|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB}.VS2013ReleaseSigned|Any CPU.Build.0 = VS2013ReleaseSigned|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.DebugSigned|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.DebugSigned|Any CPU.Build.0 = Debug|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.ReleaseSigned|Any CPU.ActiveCfg = Release|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.ReleaseSigned|Any CPU.Build.0 = Release|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.VS2012DebugSigned|Any CPU.Build.0 = VS2012DebugSigned|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.VS2012ReleaseSigned|Any CPU.Build.0 = VS2012ReleaseSigned|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.VS2013DebugSigned|Any CPU.Build.0 = VS2013DebugSigned|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{6C0104FC-034B-48FC-92AF-A750F7828701}.VS2013ReleaseSigned|Any CPU.Build.0 = VS2013ReleaseSigned|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.DebugSigned|Any CPU.ActiveCfg = Debug|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.DebugSigned|Any CPU.Build.0 = Debug|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.ReleaseSigned|Any CPU.ActiveCfg = Release|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.ReleaseSigned|Any CPU.Build.0 = Release|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.VS2012DebugSigned|Any CPU.Build.0 = VS2012DebugSigned|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.VS2012ReleaseSigned|Any CPU.Build.0 = VS2012ReleaseSigned|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.VS2013DebugSigned|Any CPU.Build.0 = VS2013DebugSigned|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{5671D635-160C-4BE6-B43C-43C99A308040}.VS2013ReleaseSigned|Any CPU.Build.0 = VS2013ReleaseSigned|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.DebugSigned|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.DebugSigned|Any CPU.Build.0 = Debug|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.ReleaseSigned|Any CPU.ActiveCfg = Release|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.ReleaseSigned|Any CPU.Build.0 = Release|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.VS2012DebugSigned|Any CPU.ActiveCfg = VS2012DebugSigned|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.VS2012ReleaseSigned|Any CPU.ActiveCfg = VS2012ReleaseSigned|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.VS2013DebugSigned|Any CPU.ActiveCfg = VS2013DebugSigned|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.VS2013DebugSigned|Any CPU.Build.0 = VS2013DebugSigned|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.VS2013ReleaseSigned|Any CPU.ActiveCfg = VS2013ReleaseSigned|Any CPU
+		{8D9563FD-B2AA-4378-A950-962775E18C30}.VS2013ReleaseSigned|Any CPU.Build.0 = VS2013ReleaseSigned|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0C1613BE-0882-441E-B6F6-0215CB580856} = {65D3DA91-ECE3-4C8B-A9A3-111565C6F199}
+		{CFEFC297-FBFF-40E1-AC80-9EDE57D107AE} = {65D3DA91-ECE3-4C8B-A9A3-111565C6F199}
+		{372C2EBB-C40A-42EB-9FD2-2BD1CDA08695} = {510806A6-AEF1-41B0-98BD-3293D9183C6A}
+		{6E65051C-E25E-40DE-8C53-6EEB1A196505} = {510806A6-AEF1-41B0-98BD-3293D9183C6A}
+		{D0A4E431-D5D2-4780-8A6E-9ECC7FDE1CDA} = {510806A6-AEF1-41B0-98BD-3293D9183C6A}
+		{F50154B5-27B9-4B60-91CF-0F4C11049AA8} = {EF856CC3-4BE5-4AE1-8445-1779E76F91F4}
+		{D2415EDA-667B-4F8A-954F-1C211E43BF62} = {65D3DA91-ECE3-4C8B-A9A3-111565C6F199}
+		{9BF8E2D9-ECCE-471A-9440-E7B027D14D0A} = {510806A6-AEF1-41B0-98BD-3293D9183C6A}
+		{45A40469-BADD-497E-847A-D6BDC811FC6D} = {BC34C770-B1FA-4479-9D1E-2DD114FCB2A4}
+		{92535907-8225-49EE-92D2-969C93DD4E4B} = {0C1613BE-0882-441E-B6F6-0215CB580856}
+		{C0558C6D-984B-4EA2-9048-EC5C555D83E4} = {CFEFC297-FBFF-40E1-AC80-9EDE57D107AE}
+		{24D286CB-B1AB-4C8B-9671-5C6443846A89} = {0C1613BE-0882-441E-B6F6-0215CB580856}
+		{F0E7F89A-D17F-40BD-A962-9EA37ED33B20} = {0C1613BE-0882-441E-B6F6-0215CB580856}
+		{4208FF77-AE28-4F4B-9776-E9355BB4C243} = {CFEFC297-FBFF-40E1-AC80-9EDE57D107AE}
+		{8D14BF33-3884-4E55-AC3A-0AB9A4660F41} = {CFEFC297-FBFF-40E1-AC80-9EDE57D107AE}
+		{3861BFD1-D038-4D93-A292-C688BE5B1109} = {D2415EDA-667B-4F8A-954F-1C211E43BF62}
+		{A2FE72F7-9AE6-4332-BFFF-34D0DB96F6BE} = {D2415EDA-667B-4F8A-954F-1C211E43BF62}
+		{01875667-0A2D-4579-A515-BA9F0040FCDB} = {D2415EDA-667B-4F8A-954F-1C211E43BF62}
+		{86E21F03-1990-4E31-B2B5-92253EC724BC} = {45A40469-BADD-497E-847A-D6BDC811FC6D}
+		{7BBDC201-BFAD-4831-8E9F-5929CBAA9190} = {45A40469-BADD-497E-847A-D6BDC811FC6D}
+		{E29523B5-06FD-48C1-9E12-63E7E80BFED3} = {45A40469-BADD-497E-847A-D6BDC811FC6D}
+		{429D9B6A-0477-48FA-B401-2FA7B910AB8F} = {45A40469-BADD-497E-847A-D6BDC811FC6D}
+		{FC8F76FE-61AF-42E1-8682-4687D2612FEF} = {8CC24DF2-D25D-4C1E-9DE7-6B985F8B0342}
+		{73A6811B-5395-4BE3-885E-F8011C8FE147} = {8CC24DF2-D25D-4C1E-9DE7-6B985F8B0342}
+		{F5EAF304-52EB-4952-B0F3-176DCFC569D7} = {54E752CD-F9AC-498D-A47A-3B48CEEC719E}
+		{8C716A7B-E058-49F9-BDAE-0B05A13843DB} = {54E752CD-F9AC-498D-A47A-3B48CEEC719E}
+		{6C0104FC-034B-48FC-92AF-A750F7828701} = {54E752CD-F9AC-498D-A47A-3B48CEEC719E}
+		{5671D635-160C-4BE6-B43C-43C99A308040} = {54E752CD-F9AC-498D-A47A-3B48CEEC719E}
+		{8D9563FD-B2AA-4378-A950-962775E18C30} = {54E752CD-F9AC-498D-A47A-3B48CEEC719E}
+	EndGlobalSection
+EndGlobal

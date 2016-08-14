@@ -1,0 +1,44 @@
+﻿<VSTemplate Version="3.0.0"
+            Type="Item"
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007"
+            >
+  <TemplateData>
+    <Name>Content Type with Event Receiver (CKSDev)</Name>
+    <Description>A SharePoint Content Type with Event Receiver item.</Description>
+    <Icon>CTER.ico</Icon>
+    <TemplateID>SharePoint14SCTER_CS_ITEM</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>121</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>ContentType</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+    <vssdk:OutputSubPath>SharePoint\SharePoint14</vssdk:OutputSubPath>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\Elements.xml" OpenInEditor="true">CTER.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata">CTER.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$EventReceiver.cs">CTER.cs</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$loc_ParentContentTypeComment$" _locID="$loc_ParentContentTypeComment$" _locAttrData="Value" Value="Parent ContentType" />
+      <CustomParameter Name="$loc_ContentTypeGroupName$" _locID="$loc_ContentTypeGroupName$" _locAttrData="Value" Value="Custom Content Types" />
+      <CustomParameter Name="$loc_ContentTypeDescription$" _locID="$loc_ContentTypeDescription$" _locAttrData="Value" Value="My Content Type" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>Microsoft.VisualStudio.SharePoint.ProjectExtensions.Wizards.ContentTypeWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
+

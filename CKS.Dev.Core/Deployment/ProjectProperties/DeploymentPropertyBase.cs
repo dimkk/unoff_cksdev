@@ -1,0 +1,104 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.VisualStudio.SharePoint;
+
+#if VS2012Build_SYMBOL
+    namespace CKS.Dev11.VisualStudio.SharePoint.Deployment.ProjectProperties
+#elif VS2013Build_SYMBOL
+namespace CKS.Dev12.VisualStudio.SharePoint.Deployment.ProjectProperties
+#elif VS2014Build_SYMBOL
+    namespace CKS.Dev13.VisualStudio.SharePoint.Deployment.ProjectProperties
+#else
+namespace CKS.Dev.VisualStudio.SharePoint.Deployment.ProjectProperties
+#endif
+{
+    /// <summary>
+    /// Deployment property helper.
+    /// </summary>
+    public abstract class DeploymentPropertyBase
+    {
+        /// <summary>
+        /// The category.
+        /// </summary>
+        protected const string propertyCategory = "Quick Deploy (CKSDEV)";
+
+        /// <summary>
+        /// The sharepoint project.
+        /// </summary>
+        protected ISharePointProject sharePointProject = null;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DeploymentPropertyBase"/> class.
+        /// </summary>
+        /// <param name="myProject">My project.</param>
+        protected DeploymentPropertyBase(ISharePointProject myProject)
+        {
+            sharePointProject = myProject;
+        }
+
+        /// <summary>
+        /// Gets the string value.
+        /// </summary>
+        /// <param name="id">The id.</param>
+        /// <param name="defaultValue">The default value.</param>
+        /// <returns></returns>
+        internal string GetStringValue(string id, string defaultValue)
+        {
+            string propvalue = null;
+
+            // Try to get the value from the .user file. The value of the property is 
+            // stored in the variable "propvalue".
+            if (!sharePointProject.ProjectUserFileData.TryGetValue(id, out propvalue))
+            {
+                // If we cannot get the value, then return the default value.
+                propvalue = defaultValue;
+            }
+
+            return propvalue;
+        }
+
+        /// <summary>
+        /// Gets the bool value.
+        /// </summary>
+        /// <param name="id">The id.</param>
+        /// <param name="defaultValue">if set to <c>true</c> [default value].</param>
+        /// <returns></returns>
+        internal bool GetBoolValue(string id, bool defaultValue)
+        {
+            return bool.Parse(GetStringValue(id, defaultValue.ToString()));
+        }
+
+        /// <summary>
+        /// Sets the string value.
+        /// </summary>
+        /// <param name="id">The id.</param>
+        /// <param name="value">The value.</param>
+        internal void SetStringValue(string id, string value)
+        {
+            // If a key is not already in the .user file, add one.
+            if (!sharePointProject.ProjectUserFileData.ContainsKey(id))
+            {
+                // Add a new key/value pair to the .user file.
+                sharePointProject.ProjectUserFileData.Add(id, value.ToString());
+            }
+            else
+            {
+                // Set the property value.
+                sharePointProject.ProjectUserFileData[id] = value.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Sets the bool value.
+        /// </summary>
+        /// <param name="id">The id.</param>
+        /// <param name="value">if set to <c>true</c> [value].</param>
+        internal void SetBoolValue(string id, bool value)
+        {
+            SetStringValue(id, value.ToString());
+        }
+    }
+}

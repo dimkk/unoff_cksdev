@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!-- Defaults -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <!-- Defaults end -->
+  <!-- General -->
+  <PropertyGroup>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <!-- General end -->
+  <!-- Project -->
+  <PropertyGroup>
+    <ProjectGuid>{8D9563FD-B2AA-4378-A950-962775E18C30}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <!-- Project end -->
+  <!-- Source Control -->
+  <PropertyGroup>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <!-- Source Control end -->
+  <!-- Signing -->
+  <!-- Signing VS2012 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2012DebugSigned' Or '$(Configuration)' == 'VS2012ReleaseSigned'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <!-- Signing VS2013 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2013DebugSigned' Or '$(Configuration)' == 'VS2013ReleaseSigned'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <!-- Signing VS2014 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2014DebugSigned' Or '$(Configuration)' == 'VS2014ReleaseSigned'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <!-- Signing end -->
+  <!-- Output -->
+  <!-- Output VS2012 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2012DebugSigned' Or '$(Configuration)' == 'VS2012ReleaseSigned'">
+    <DocumentationFile>bin\$(Configuration)\CKS.Dev11.Scaffolder.XML</DocumentationFile>
+    <RootNamespace>CKS.Dev11.Scaffolder</RootNamespace>
+    <AssemblyName>CKS.Dev11.Scaffolder</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <!-- Output VS2013 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2013DebugSigned' Or '$(Configuration)' == 'VS2013ReleaseSigned'">
+    <DocumentationFile>bin\$(Configuration)\CKS.Dev12.Scaffolder.XML</DocumentationFile>
+    <RootNamespace>CKS.Dev12.Scaffolder</RootNamespace>
+    <AssemblyName>CKS.Dev12.Scaffolder</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <!-- Output VS2014 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2014DebugSigned' Or '$(Configuration)' == 'VS2014ReleaseSigned'">
+    <DocumentationFile>bin\$(Configuration)\CKS.Dev13.Scaffolder.XML</DocumentationFile>
+    <RootNamespace>CKS.Dev13.Scaffolder</RootNamespace>
+    <AssemblyName>CKS.Dev13.Scaffolder</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <!-- Output end -->
+  <!-- Configurations -->
+  <!-- Debug Signed -->
+  <!-- Debug Signed for VS2012 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2012DebugSigned|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2012DebugSigned\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VS2012Build_SYMBOL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <!-- Debug Signed for VS2013 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2013DebugSigned|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2013DebugSigned\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VS2013Build_SYMBOL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <!-- Debug Signed for VS2014 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2014DebugSigned|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2014DebugSigned\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VS2014Build_SYMBOL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <!-- Release Signed -->
+  <!-- Release Signed for VS2012 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2012ReleaseSigned|AnyCPU'">
+    <OutputPath>bin\VS2012ReleaseSigned\</OutputPath>
+    <DefineConstants>TRACE;VS2012Build_SYMBOL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <!-- Release Signed for VS2013 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2013ReleaseSigned|AnyCPU'">
+    <OutputPath>bin\VS2013ReleaseSigned\</OutputPath>
+    <DefineConstants>TRACE;VS2013Build_SYMBOL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <!-- Release Signed for VS2014 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2014ReleaseSigned|AnyCPU'">
+    <OutputPath>bin\VS2014ReleaseSigned\</OutputPath>
+    <DefineConstants>TRACE;VS2014Build_SYMBOL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>CKS.Dev.Core.Scaffolder</RootNamespace>
+  </PropertyGroup>
+  <!-- Configurations end -->
+  <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Scaffolding.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
+    <Reference Include="Microsoft.AspNet.Scaffolding.EntityFramework.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomCodeGenerator.cs" />
+    <Compile Include="CustomCodeGeneratorFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomViewModel.cs" />
+    <Compile Include="UI\ModelType.cs" />
+    <Compile Include="UI\SelectModelWindow.xaml.cs">
+      <DependentUpon>SelectModelWindow.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\_TemplateIconSample.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Templates\CustomCodeGenerator\CustomTextTemplate.cs.t4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UI\SelectModelWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

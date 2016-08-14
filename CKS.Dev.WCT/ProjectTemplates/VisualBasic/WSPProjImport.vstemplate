@@ -1,0 +1,33 @@
+﻿<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Import WSPBuilder Project</Name>
+    <Description>A project for importing the contents of an existing WSPBuilder project into a Visual Studio 2010 SharePoint project</Description>
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="221" />
+    <TemplateID>SharePoint14WSPBuilderImportProject_VB</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>100</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <CreateInPlace>true</CreateInPlace>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>WSPBuilderImportProject</DefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="WSPProjImport.vbproj" ReplaceParameters="true">
+		<ProjectItem ReplaceParameters="true" TargetFileName="My Project\AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Package\Package.package">Package.package</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="Package\Package.Template.xml">manifest.xml</ProjectItem>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="$language$" Value="VisualBasic" />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>CKS.Dev.WCT, Version=2.5.0.0, Culture=neutral, PublicKeyToken=487fd6341a5c701f</Assembly>
+    <FullClassName>CKS.Dev.WCT.WSPProjImportWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

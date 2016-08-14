@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel"
+             Type="Microsoft.VisualStudio.SharePoint.Module"
+             DefaultFile="Elements.xml"
+             SupportedTrustLevels="All"
+             SupportedDeploymentScopes="Site">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="CSS\" Type="ElementManifest" />
+    <ProjectItemFile Source="$fileinputname$.css" Target="CSS\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

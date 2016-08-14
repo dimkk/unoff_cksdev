@@ -1,0 +1,47 @@
+﻿<VSTemplate Version="3.0.0"
+            Type="Item"
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007"
+            >
+  <TemplateData>
+    <Name>SharePoint 2010 - Ashx Handler (CKSDev)</Name>
+    <Description>A SharePoint 2010 hosted ASHX handler item.</Description>
+    <Icon>Ashx.ico</Icon>
+    <TemplateID>SharePoint14AshxHandler_CS_ITEM</TemplateID>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>200</SortOrder>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>AshxHandler</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Web</Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$.ashx" OpenInEditor="false">Ashx.ashx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\$fileinputname$.ashx.cs" SubType="ASPXCodeBehind" ItemType=""  OpenInEditor="true">Ashx.ashx.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$\SharePointProjectItem.spdata">Ashx.spdata</ProjectItem>
+    <CustomParameters>
+      <CustomParameter Name="MappedFolderType" Value="ApplicationPage" />
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$HandlerClassName$" Value="$safeitemrootname$" />
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>CKS.Dev11, Version=1.3.0.0, Culture=neutral, PublicKeyToken=487fd6341a5c701f</Assembly>
+    <FullClassName>CKS.Dev11.VisualStudio.SharePoint.Content.Wizards.AshxHandlerWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

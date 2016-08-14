@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!-- Defaults -->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+  </PropertyGroup>
+  <!-- Defaults end -->
+  <!-- General -->
+  <PropertyGroup>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <!-- General end -->
+  <!-- Project -->
+  <PropertyGroup>
+    <ProjectGuid>{5671D635-160C-4BE6-B43C-43C99A308040}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <!-- Project end -->
+  <!-- Source Control -->
+  <PropertyGroup>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <!-- Source Control end -->
+  <!-- Signing VS2012 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2012DebugSigned' Or '$(Configuration)' == 'VS2012ReleaseSigned'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <!-- Signing VS2013 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2013DebugSigned' Or '$(Configuration)' == 'VS2013ReleaseSigned'">
+    <SignAssembly>true</SignAssembly>
+    <DelaySign>false</DelaySign>
+    <AssemblyOriginatorKeyFile>..\Signing\CKS.Dev.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <!-- Signing end -->
+  <!-- Output -->
+  <!-- Output VS2012 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2012DebugSigned' Or '$(Configuration)' == 'VS2012ReleaseSigned'">
+    <DocumentationFile>bin\$(Configuration)\CKS.Dev11.Commands.XML</DocumentationFile>
+    <RootNamespace>CKS.Dev11.Cmd</RootNamespace>
+    <AssemblyName>CKS.Dev11.Cmd</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <!-- Output VS2013 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2013DebugSigned' Or '$(Configuration)' == 'VS2013ReleaseSigned'">
+    <DocumentationFile>bin\$(Configuration)\CKS.Dev12.Commands.XML</DocumentationFile>
+    <RootNamespace>CKS.Dev12.Cmd</RootNamespace>
+    <AssemblyName>CKS.Dev12.Cmd</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <!-- Output VS2014 -->
+  <PropertyGroup Condition="'$(Configuration)' == 'VS2014DebugSigned' Or '$(Configuration)' == 'VS2014ReleaseSigned'">
+    <DocumentationFile>bin\$(Configuration)\CKS.Dev13.Commands.XML</DocumentationFile>
+    <RootNamespace>CKS.Dev13.Cmd</RootNamespace>
+    <AssemblyName>CKS.Dev13.Cmd</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <!-- Output end -->
+  <!-- Configurations -->
+  <!-- Debug Signed -->
+  <!-- Debug Signed for VS2012 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2012DebugSigned|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2012DebugSigned\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VS2012Build_SYMBOL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <!-- Debug Signed for VS2013 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2013DebugSigned|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2013DebugSigned\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VS2013Build_SYMBOL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <!-- Debug Signed for VS2014 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2014DebugSigned|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\VS2014DebugSigned\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VS2014Build_SYMBOL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <!-- Release Signed -->
+  <!-- Release Signed for VS2012 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2012ReleaseSigned|AnyCPU'">
+    <OutputPath>bin\VS2012ReleaseSigned\</OutputPath>
+    <DefineConstants>TRACE;VS2012Build_SYMBOL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <!-- Release Signed for VS2013 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2013ReleaseSigned|AnyCPU'">
+    <OutputPath>bin\VS2013ReleaseSigned\</OutputPath>
+    <DefineConstants>TRACE;VS2013Build_SYMBOL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <!-- Release Signed for VS2014 -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2014ReleaseSigned|AnyCPU'">
+    <OutputPath>bin\VS2014ReleaseSigned\</OutputPath>
+    <DefineConstants>TRACE;VS2014Build_SYMBOL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>CKS.Dev.Core.Cmd</RootNamespace>
+  </PropertyGroup>
+  <!-- Configurations end -->
+  <!-- Conditional References -->
+  <ItemGroup Condition="'$(Configuration)' == 'VS2012DebugSigned' Or '$(Configuration)' == 'VS2012ReleaseSigned'">
+    <Reference Include="Microsoft.VisualStudio.SharePoint.Explorer.Extensions, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.SharePoint.Explorer.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'VS2013DebugSigned' Or '$(Configuration)' == 'VS2013ReleaseSigned'">
+    <Reference Include="Microsoft.VisualStudio.SharePoint.Explorer.Extensions, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.SharePoint.Explorer.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <!-- Conditional References end -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContentTypeSharePointCommandIds.cs" />
+    <Compile Include="DeploymentSharePointCommandIds.cs" />
+    <Compile Include="DesignCatalogSharePointCommandIds.cs" />
+    <Compile Include="DeveloperDashboardCommandIds.cs" />
+    <Compile Include="FeatureSharePointCommandIds.cs" />
+    <Compile Include="FieldSharePointCommandIds.cs" />
+    <Compile Include="FileSharePointCommandIds.cs" />
+    <Compile Include="Info\ContentTypeInfo.cs" />
+    <Compile Include="Info\ContentTypeNodeInfo.cs" />
+    <Compile Include="Info\DeploymentFeatureInfo.cs" />
+    <Compile Include="Info\DeploymentFeatureScope.cs" />
+    <Compile Include="Info\DesignCatalogNodeInfo.cs" />
+    <Compile Include="Info\DeveloperDashboardNodeInfo.cs" />
+    <Compile Include="Info\EventReceiverInfo.cs" />
+    <Compile Include="Info\FeatureActivationInfo.cs" />
+    <Compile Include="Info\FeatureDependencyInfo.cs" />
+    <Compile Include="Info\FeatureElementInfo.cs" />
+    <Compile Include="Info\FeatureInfo.cs" />
+    <Compile Include="Info\FeatureScope.cs" />
+    <Compile Include="Info\FieldNodeInfo.cs" />
+    <Compile Include="Info\FileNodeInfo.cs" />
+    <Compile Include="Info\FolderNodeInfo.cs" />
+    <Compile Include="Info\PublishingPageInfo.cs" />
+    <Compile Include="Info\SolutionGalleryNodeInfo.cs" />
+    <Compile Include="Info\SolutionInfo.cs" />
+    <Compile Include="Info\SPBasePermissionInfo.cs" />
+    <Compile Include="Info\StyleLibraryNodeInfo.cs" />
+    <Compile Include="Info\ThemeGalleryNodeInfo.cs" />
+    <Compile Include="Info\WebPartGalleryNodeInfo.cs" />
+    <Compile Include="Info\WebPartNodeInfo.cs" />
+    <Compile Include="Info\WebTemplateInfo.cs" />
+    <Compile Include="ListEventReceiversCommandIds.cs" />
+    <Compile Include="MasterPageGallerySharePointCommandIds.cs" />
+    <Compile Include="ObjectModelSharePointCommandIds.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublishingPageCommandIds.cs" />
+    <Compile Include="SiteColumnsSharePointCommandIds.cs" />
+    <Compile Include="SiteCommandIds.cs" />
+    <Compile Include="SolutionGallerySharePointCommandIds.cs" />
+    <Compile Include="SolutionSharePointCommandIds.cs" />
+    <Compile Include="StyleLibrarySharePointCommandIds.cs" />
+    <Compile Include="ThemeGallerySharePointCommandIds.cs" />
+    <Compile Include="ThemeSharePointCommandIds.cs" />
+    <Compile Include="WebPartGallerySharePointCommandIds.cs" />
+    <Compile Include="WebPartSharePointCommandIds.cs" />
+    <Compile Include="WebTemplateCollectionSharePointCommandIds.cs" />
+    <Compile Include="WebTemplateSharePointCommandIds.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

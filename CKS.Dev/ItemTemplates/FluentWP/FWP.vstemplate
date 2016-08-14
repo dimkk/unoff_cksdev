@@ -1,0 +1,66 @@
+﻿<VSTemplate Version="2.0.0" 
+            Type="Item" 
+            xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:vssdk="http://schemas.microsoft.com/developer/vssdktemplate/2007"
+            xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Fluent UI Visual Web Part (CKSDev)</Name>
+    <Description>A SharePoint visual web part item which utilises the Fluent UI capabilities for editing.</Description>
+    <Icon Package="{FE128BF8-59A2-4ed7-8F2A-7EE1BC4D1C86}" ID="236" />
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>11</SortOrder>
+    <DefaultName>FluentVisualWebPart</DefaultName>
+    <TemplateGroupID>SharePointItemTemplateGroupID</TemplateGroupID>
+    <ShowByDefault>false</ShowByDefault>
+    <vssdk:OutputSubPath>SharePoint\SharePoint14</vssdk:OutputSubPath>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>Microsoft.SharePoint</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Web</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Web.Extensions</Assembly>
+      </Reference>
+    </References>
+    
+    
+    <ProjectItem ReplaceParameters="true" TargetFileName="Layouts/WebParts/$fileinputname$/Edit$fileinputname$.aspx" OpenInEditor="false">FAP.aspx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Layouts/WebParts/$fileinputname$/Edit$fileinputname$.aspx.cs" OpenInEditor="false">FAP.aspx.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="Layouts/WebParts/$fileinputname$/Edit$fileinputname$.aspx.designer.cs" OpenInEditor="false">FAP.aspx.des.cs</ProjectItem>
+    
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$.cs" OpenInEditor="false">FWP.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$.webpart" OpenInEditor="false">FWP.webpart</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/Elements.xml" OpenInEditor="false">FWP.xml</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/SharePointProjectItem.spdata" OpenInEditor="false">FWP.spdata</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$UserControl.ascx" OpenInEditor="false">FUC.ascx</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$UserControl.ascx.cs" OpenInEditor="false">FUC.ascx.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$/$fileinputname$UserControl.ascx.designer.cs" OpenInEditor="false">FUC.ascx.des.cs</ProjectItem>
+
+    <ProjectItem ReplaceParameters="true" TargetFileName="AppGlobalResources/$rootnamespace$.$subnamespace$.$fileinputname$WebPart.resx" OpenInEditor="false">FWP.resx</ProjectItem>
+
+    <CustomParameters>
+      <CustomParameter Name="SharePointProjectTemplateAttributes" Value="ProjectItem"/>
+      <CustomParameter Name="SharePointProjectParentFilter" Value="General;ProjectItem"/>
+      <CustomParameter Name="$import_error_message$" Value="$Resources:core,ImportErrorMessage;" />
+      <CustomParameter Name="$webpart_title$" Value="$fileinputname$" />
+      <CustomParameter Name="$webpart_classname$" Value="$safeitemrootname$" />
+      <CustomParameter Name="$ascx_classname$" Value="$safeitemrootname$UserControl" />
+      <CustomParameter Name="$ProjectItemName$" Value="$fileinputname$"/>
+      <CustomParameter Name="$loc_webpart_description$" _locID="$loc_webpart_description$" _locAttrData="Value" Value="My Visual WebPart" />
+      <CustomParameter Name="$loc_ascxPath_comment$" _locID="$loc_ascxPath_comment$" _locAttrData="Value" Value="Visual Studio might automatically update this path when you change the Visual Web Part project item." />
+    </CustomParameters>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>CKS.Dev, Version=2.5.0.0, Culture=neutral, PublicKeyToken=487fd6341a5c701f</Assembly>
+    <FullClassName>CKS.Dev.VisualStudio.SharePoint.Content.Wizards.FluentUIVisualWebPartWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

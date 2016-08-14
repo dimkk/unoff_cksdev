@@ -1,0 +1,26 @@
+﻿<?xml version='1.0'?>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. -->
+<ps:Config xmlns:ps="urn:Microsoft.SharePoint.PowerShell"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:schemaLocation="urn:Microsoft.SharePoint.PowerShell SPCmdletSchema.xsd">
+  <ps:Assembly Name="$SharePoint.Project.AssemblyFullName$">
+    <ps:Cmdlet>
+      <ps:VerbName>Get-$subnamespace$ServiceApplication</ps:VerbName>
+      <ps:ClassName>$rootnamespace$.$subnamespace$.PowerShell.Get$subnamespace$ServiceApplication</ps:ClassName>
+      <ps:HelpFile></ps:HelpFile>
+      <ps:FeatureDependencyId>$featureid$</ps:FeatureDependencyId>
+    </ps:Cmdlet>
+    <ps:Cmdlet>
+      <ps:VerbName>Set-$subnamespace$ServiceApplication</ps:VerbName>
+      <ps:ClassName>$rootnamespace$.$subnamespace$.PowerShell.Set$subnamespace$ServiceApplication</ps:ClassName>
+      <ps:HelpFile></ps:HelpFile>
+      <ps:FeatureDependencyId>$featureid$</ps:FeatureDependencyId>
+    </ps:Cmdlet>
+    <ps:Cmdlet>
+      <ps:VerbName>New-$subnamespace$ServiceApplication</ps:VerbName>
+      <ps:ClassName>$rootnamespace$.$subnamespace$.PowerShell.New$subnamespace$ServiceApplication</ps:ClassName>
+      <ps:HelpFile></ps:HelpFile>
+      <ps:FeatureDependencyId>$featureid$</ps:FeatureDependencyId>
+    </ps:Cmdlet>
+  </ps:Assembly>
+</ps:Config>
